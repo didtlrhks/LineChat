@@ -14,6 +14,8 @@
 		8EDA8D082B51165800705C9F /* LineCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8D072B51165800705C9F /* LineCloneTests.swift */; };
 		8EDA8D122B51165800705C9F /* LineCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8D112B51165800705C9F /* LineCloneUITests.swift */; };
 		8EDA8D142B51165800705C9F /* LineCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8D132B51165800705C9F /* LineCloneUITestsLaunchTests.swift */; };
+		8EDA8D212B51487700705C9F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8D202B51487700705C9F /* Color+Extension.swift */; };
+		8EDA8D232B514D9600705C9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDA8D222B514D9600705C9F /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		8EDA8D0D2B51165800705C9F /* LineCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LineCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDA8D112B51165800705C9F /* LineCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCloneUITests.swift; sourceTree = "<group>"; };
 		8EDA8D132B51165800705C9F /* LineCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EDA8D202B51487700705C9F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		8EDA8D222B514D9600705C9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 			children = (
 				8EDA8CF62B51165500705C9F /* LineCloneApp.swift */,
 				8EDA8CF82B51165500705C9F /* ContentView.swift */,
-				8EDA8CFA2B51165700705C9F /* Assets.xcassets */,
+				8EDA8D202B51487700705C9F /* Color+Extension.swift */,
 				8EDA8CFC2B51165700705C9F /* Preview Content */,
+				8EDA8CFA2B51165700705C9F /* Assets.xcassets */,
+				8EDA8D222B514D9600705C9F /* Colors.xcassets */,
 			);
 			path = LineClone;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDA8D232B514D9600705C9F /* Colors.xcassets in Resources */,
 				8EDA8CFE2B51165700705C9F /* Preview Assets.xcassets in Resources */,
 				8EDA8CFB2B51165700705C9F /* Assets.xcassets in Resources */,
 			);
@@ -257,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDA8D212B51487700705C9F /* Color+Extension.swift in Sources */,
 				8EDA8CF92B51165500705C9F /* ContentView.swift in Sources */,
 				8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */,
 			);
