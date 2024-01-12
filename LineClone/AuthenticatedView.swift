@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AuthenticatedView.swift
 //  LineClone
 //
 //  Created by 양시관 on 1/12/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AuthenticatedView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,6 +19,8 @@ struct ContentView: View {
     }
 }
 
+//
+
 #Preview {
-    ContentView()
+    AuthenticatedView()
 }
