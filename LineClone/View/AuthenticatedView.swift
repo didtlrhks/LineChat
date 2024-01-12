@@ -10,18 +10,17 @@ import SwiftUI
 struct AuthenticatedView: View {
     @StateObject var authViewModel : AuthenticatedViewModel
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        switch authViewModel.authenticationState {
+        case .unauthenticated:
+            LoginIntroView()
+        case .authenticated:
+            MainTabView()
         }
-        .padding()
     }
 }
 
 //
 
 #Preview {
-    AuthenticatedView(authViewModel: .init())
+    AuthenticatedView(authViewModel: .init(container: .init(services:StubService() )))
 }
