@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AuthenticatedView: View {
+    @StateObject var authViewModel : AuthenticatedViewModel
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -22,5 +23,5 @@ struct AuthenticatedView: View {
 //
 
 #Preview {
-    AuthenticatedView()
+    AuthenticatedView(authViewModel: .init())
 }

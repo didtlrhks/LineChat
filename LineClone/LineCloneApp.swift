@@ -13,7 +13,7 @@ struct LineCloneApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthenticatedView()
+            AuthenticatedView(authViewModel: .init())
                 .environmentObject(container)
         }
     }
