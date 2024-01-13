@@ -16,6 +16,7 @@
 		8E4BB49B2B5160460039FBB7 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB49A2B5160460039FBB7 /* AuthenticationService.swift */; };
 		8E4BB4A12B5163500039FBB7 /* LoginIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4A02B5163500039FBB7 /* LoginIntroView.swift */; };
 		8E4BB4A32B5163740039FBB7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4A22B5163740039FBB7 /* MainTabView.swift */; };
+		8E4BB4A52B52522D0039FBB7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4A42B52522D0039FBB7 /* LoginView.swift */; };
 		8EA7802E2B51523D00ADE621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
@@ -54,6 +55,7 @@
 		8E4BB49A2B5160460039FBB7 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		8E4BB4A02B5163500039FBB7 /* LoginIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntroView.swift; sourceTree = "<group>"; };
 		8E4BB4A22B5163740039FBB7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		8E4BB4A42B52522D0039FBB7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA7802F2B5152B200ADE621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4BB4A02B5163500039FBB7 /* LoginIntroView.swift */,
+				8E4BB4A42B52522D0039FBB7 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				8E4BB4A32B5163740039FBB7 /* MainTabView.swift in Sources */,
 				8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */,
 				8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */,
+				8E4BB4A52B52522D0039FBB7 /* LoginView.swift in Sources */,
 				8E4BB49B2B5160460039FBB7 /* AuthenticationService.swift in Sources */,
 				8E4BB4A12B5163500039FBB7 /* LoginIntroView.swift in Sources */,
 			);
