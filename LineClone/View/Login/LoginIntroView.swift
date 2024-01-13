@@ -24,20 +24,12 @@ struct LoginIntroView: View {
                 
                 Spacer()
                 
-                Button
-                {
+                Button {
                     isPresentedLoginView.toggle()
-                }label: {
+                }
+                label : {
                     Text("로그인")
-                        .font(.system(size: 14))
-                        .foregroundColor(.lineAppColor)
-                        .frame(maxWidth: .infinity,maxHeight: 40)
-                }
-                .overlay {
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.lineAppColor,lineWidth: 0.8)
-                }
-                .padding(.horizontal,15)
+                }.buttonStyle(LoginButtonStyle(textColor: .lineAppColor, borderColor: .lineAppColor))
             }
             .navigationDestination(isPresented: $isPresentedLoginView) {
                 LoginView()
