@@ -28,7 +28,7 @@ struct LoginView: View {
             .padding(.horizontal,30)
             Spacer()
             Button {
-                
+                authViewModel.send(action: .googleLogin)
             }
             label : {
                 Text("Google로 로그인")
