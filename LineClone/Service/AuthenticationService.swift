@@ -22,6 +22,7 @@ enum AuthenticationError : Error {
 protocol AuthenticationServiceType {
     func checkAuthenticationState() -> String?
     func signInWithGoogle() -> AnyPublisher<User, ServiceError>
+    func logout() -> AnyPublisher<Void,ServiceError>
 }
 
 class AuthenticationService: AuthenticationServiceType {
@@ -44,6 +45,17 @@ class AuthenticationService: AuthenticationServiceType {
                 case let .failure(error):
                     promise(.failure(.error(error)))
                 }
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func logout() -> AnyPublisher<Void,ServiceError> {
+        Future { promise in
+            do{
+                try Auth.auth().signOut()
+                promise(.success(()))
+            } catch {
+                promise(.failure(.error(error)))
             }
         }.eraseToAnyPublisher()
     }
@@ -124,6 +136,10 @@ class StubAuthenticationService : AuthenticationServiceType{
     
     func checkAuthenticationState() -> String? {
         return nil
+    }
+    
+    func logout() -> AnyPublisher<Void, ServiceError> {
+        Empty().eraseToAnyPublisher()
     }
 }
 

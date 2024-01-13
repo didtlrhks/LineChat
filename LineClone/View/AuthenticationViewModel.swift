@@ -24,7 +24,7 @@ class AuthenticatedViewModel : ObservableObject {
     enum Action {
         case googleLogin
         case checkAuthenticationState
-        
+        case logout
     }
     
     @Published var authenticationState : AuthenticationState = .unauthenticated
@@ -65,7 +65,24 @@ class AuthenticatedViewModel : ObservableObject {
                         
                     }.store(in: &subscriptions)
                 
+    
+            
+            
+            
+            
+        case .logout:
+            container.services.authService.logout()
+                .sink {
+                    completion in
+                    
+                } receiveValue : { [weak self] _ in
+                    self?.authenticationState = .unauthenticated
+                    self?.userId = nil
+                    
+                    
+                }.store(in : &subscriptions)
         }
+    
     }
     
 }
