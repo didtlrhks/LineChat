@@ -20,6 +20,7 @@ enum AuthenticationError : Error {
 }
 
 protocol AuthenticationServiceType {
+    
     func signInWithGoogle() -> AnyPublisher<User, ServiceError>
 }
 
