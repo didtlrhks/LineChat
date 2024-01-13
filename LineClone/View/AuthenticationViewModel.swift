@@ -10,6 +10,7 @@ import Combine
 
 
 enum AuthenticationState {
+    
     case unauthenticated
     case authenticated
     
@@ -22,6 +23,7 @@ class AuthenticatedViewModel : ObservableObject {
     
     enum Action {
         case googleLogin
+        case checkAuthenticationState
         
     }
     
@@ -40,6 +42,12 @@ class AuthenticatedViewModel : ObservableObject {
     
     func send(action: Action) {
         switch action {
+            
+        case .checkAuthenticationState :
+     if let userId = container.services.authService.checkAuthenticationState() {
+                self.userId = userId
+                self.authenticationState = .authenticated
+            }
         case .googleLogin :
             isLoading = true
             container.services.authService.signInWithGoogle()
@@ -53,6 +61,7 @@ class AuthenticatedViewModel : ObservableObject {
                         user in
                 self?.isLoading = false
                 self?.userId = user.id
+                self?.authenticationState = .authenticated
                         
                     }.store(in: &subscriptions)
                 

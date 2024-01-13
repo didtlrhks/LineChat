@@ -20,12 +20,20 @@ enum AuthenticationError : Error {
 }
 
 protocol AuthenticationServiceType {
-    
+    func checkAuthenticationState() -> String?
     func signInWithGoogle() -> AnyPublisher<User, ServiceError>
 }
 
 class AuthenticationService: AuthenticationServiceType {
     
+    func checkAuthenticationState() -> String? {
+        
+        if let user = Auth.auth().currentUser {
+            return user.uid
+        } else {
+            return nil
+        }
+    }
     
     func signInWithGoogle() -> AnyPublisher<User, ServiceError> {
         Future { [weak self] promise in
@@ -112,6 +120,10 @@ extension AuthenticationService {
 class StubAuthenticationService : AuthenticationServiceType{
     func signInWithGoogle() -> AnyPublisher<User,ServiceError> {
         Empty().eraseToAnyPublisher()
+    }
+    
+    func checkAuthenticationState() -> String? {
+        return nil
     }
 }
 
