@@ -10,5 +10,6 @@ import Foundation
 
 class HomeViewModel : ObservableObject {
     @Published var myUser : User?
-    @Published var users: [User] = [.stub1, .stub2]
+    @Published var users: [User] = []
 }
+

@@ -26,7 +26,7 @@ class UserDBRepository: UserDBRepositoryType {
                 value in
                 Future<Void , Error> {
                     [weak self] promise in
-                    self?.db.child("Users").child(object.id).setValue(value) {
+                    self?.db.child(DBKey.Users).child(object.id).setValue(value) {
                         error, _ in
                         if let error {
                             promise(.failure(error))
