@@ -56,13 +56,22 @@ class UserDBRepository: UserDBRepositoryType {
                 } else {
                     promise(.success(snapshot?.value))
                 }
-                
-                
-                
-                
             }
-            
-            
+        }.flatMap {
+            value in
+            if let value {
+                    return Just(value)
+                    .tryMap { try JSONSerialization.data(withJSONObject: $0)}
+                    .decode(type: UserObject.self, decoder: JSONDecoder())
+                    .mapError{DBError.error($0)}
+                    .eraseToAnyPublisher()
+            } else {
+                return Fail(error: .emptyValue).eraseToAnyPublisher()
+            }
+        }
+        .eraseToAnyPublisher()
         }
     }
-}
+
+
+
