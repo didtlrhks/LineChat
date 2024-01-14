@@ -10,19 +10,22 @@ import Foundation
 
 protocol ServiceType {
     var authService : AuthenticationServiceType{get set}
+    var userServices : UserServiceType{get set}
 }
 
 
 class Services : ServiceType {
     var authService: AuthenticationServiceType
+    var userServices: UserServiceType
     
     init() {
         self.authService = AuthenticationService()
+        self.userServices = UserService(dbRepository: UserDBRepository())
     }
 }
 
 class StubService: ServiceType {
     var authService: AuthenticationServiceType = StubAuthenticationService()
-    
+    var userServices: UserServiceType = StubUserService()
     
 }

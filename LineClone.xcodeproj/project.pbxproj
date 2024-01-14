@@ -26,6 +26,12 @@
 		8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */; };
 		8E6BBDC02B53BA6600317EDA /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDBF2B53BA6600317EDA /* ChatListView.swift */; };
 		8E6BBDC22B53BD9700317EDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDC12B53BD9700317EDA /* HomeViewModel.swift */; };
+		8E6BBDC42B53CB4F00317EDA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6BBDC32B53CB4F00317EDA /* FirebaseDatabase */; };
+		8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDC62B53CE8B00317EDA /* UserDBRepository.swift */; };
+		8E6BBDC92B53CF0E00317EDA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDC82B53CF0E00317EDA /* UserService.swift */; };
+		8E6BBDCC2B53D08000317EDA /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDCB2B53D08000317EDA /* UserObject.swift */; };
+		8E6BBDCE2B53D0D600317EDA /* DBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDCD2B53D0D600317EDA /* DBError.swift */; };
+		8E6BBDD02B53D33800317EDA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDCF2B53D33800317EDA /* Constant.swift */; };
 		8EA7802E2B51523D00ADE621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
@@ -72,6 +78,11 @@
 		8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8E6BBDBF2B53BA6600317EDA /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		8E6BBDC12B53BD9700317EDA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8E6BBDC62B53CE8B00317EDA /* UserDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBRepository.swift; sourceTree = "<group>"; };
+		8E6BBDC82B53CF0E00317EDA /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		8E6BBDCB2B53D08000317EDA /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		8E6BBDCD2B53D0D600317EDA /* DBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBError.swift; sourceTree = "<group>"; };
+		8E6BBDCF2B53D33800317EDA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA7802F2B5152B200ADE621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +106,7 @@
 			files = (
 				8E4BB4AC2B525D2A0039FBB7 /* GoogleSignInSwift in Frameworks */,
 				8E4BB4952B51595A0039FBB7 /* FirebaseAuth in Frameworks */,
+				8E6BBDC42B53CB4F00317EDA /* FirebaseDatabase in Frameworks */,
 				8E4BB4AA2B525D240039FBB7 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4BB4882B5154750039FBB7 /* DIContainer.swift */,
+				8E6BBDCF2B53D33800317EDA /* Constant.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -130,6 +143,7 @@
 				8E4BB48B2B5154AA0039FBB7 /* Services.swift */,
 				8E4BB49A2B5160460039FBB7 /* AuthenticationService.swift */,
 				8E4BB4B02B525E7F0039FBB7 /* ServiceError.swift */,
+				8E6BBDC82B53CF0E00317EDA /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -199,6 +213,24 @@
 			path = ChatList;
 			sourceTree = "<group>";
 		};
+		8E6BBDC52B53CE7600317EDA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8E6BBDCA2B53D06B00317EDA /* DTO */,
+				8E6BBDC62B53CE8B00317EDA /* UserDBRepository.swift */,
+				8E6BBDCD2B53D0D600317EDA /* DBError.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8E6BBDCA2B53D06B00317EDA /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				8E6BBDCB2B53D08000317EDA /* UserObject.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		8EDA8CEA2B51165500705C9F = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +255,7 @@
 		8EDA8CF52B51165500705C9F /* LineClone */ = {
 			isa = PBXGroup;
 			children = (
+				8E6BBDC52B53CE7600317EDA /* Repository */,
 				8E4BB4AD2B525E150039FBB7 /* Model */,
 				8EDA8CF62B51165500705C9F /* LineCloneApp.swift */,
 				8E4BB4962B5159A30039FBB7 /* AppDelegate.swift */,
@@ -284,6 +317,7 @@
 				8E4BB4942B51595A0039FBB7 /* FirebaseAuth */,
 				8E4BB4A92B525D240039FBB7 /* GoogleSignIn */,
 				8E4BB4AB2B525D2A0039FBB7 /* GoogleSignInSwift */,
+				8E6BBDC32B53CB4F00317EDA /* FirebaseDatabase */,
 			);
 			productName = LineClone;
 			productReference = 8EDA8CF32B51165500705C9F /* LineClone.app */;
@@ -408,6 +442,7 @@
 			files = (
 				8E4BB4AF2B525E1E0039FBB7 /* User.swift in Sources */,
 				8E6BBDC22B53BD9700317EDA /* HomeViewModel.swift in Sources */,
+				8E6BBDCE2B53D0D600317EDA /* DBError.swift in Sources */,
 				8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */,
 				8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */,
 				8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */,
@@ -415,6 +450,7 @@
 				8E4BB4972B5159A30039FBB7 /* AppDelegate.swift in Sources */,
 				8E4BB4A32B5163740039FBB7 /* MainTabView.swift in Sources */,
 				8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */,
+				8E6BBDD02B53D33800317EDA /* Constant.swift in Sources */,
 				8E6BBDB52B53B8A900317EDA /* MainTabType.swift in Sources */,
 				8E4BB4A72B5253CC0039FBB7 /* LoginButtonStyle.swift in Sources */,
 				8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */,
@@ -422,8 +458,11 @@
 				8E4BB49B2B5160460039FBB7 /* AuthenticationService.swift in Sources */,
 				8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */,
 				8E4BB4B12B525E7F0039FBB7 /* ServiceError.swift in Sources */,
+				8E6BBDC92B53CF0E00317EDA /* UserService.swift in Sources */,
+				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,
 				8E4BB4A12B5163500039FBB7 /* LoginIntroView.swift in Sources */,
 				8E6BBDC02B53BA6600317EDA /* ChatListView.swift in Sources */,
+				8E6BBDCC2B53D08000317EDA /* UserObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +829,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E4BB4A82B525D090039FBB7 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		8E6BBDC32B53CB4F00317EDA /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E4BB4922B5159240039FBB7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
