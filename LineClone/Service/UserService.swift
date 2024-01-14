@@ -43,6 +43,6 @@ class StubUserService : UserServiceType {
     }
     
     func getUser(userId: String) -> AnyPublisher<User, ServiceError> {
-        Empty().eraseToAnyPublisher()
+        Empty().eraseToAnyPublisher() // 유저 정보가져오기 로그인정보 
     }
 }

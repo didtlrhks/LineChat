@@ -82,6 +82,38 @@
             endingLineNumber = "69"
             landmarkName = "send(action:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F04D127E-891F-432B-83C9-A533C65BCE2B - 7dd6284336a5751b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (LineClone.User) -&gt; () in LineClone.AuthenticatedViewModel.send(action: LineClone.AuthenticatedViewModel.Action) -&gt; ()"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/View/AuthenticationViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "258">
+               </Location>
+               <Location
+                  uuid = "F04D127E-891F-432B-83C9-A533C65BCE2B - 7dd6284336a5751b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (LineClone.User) -&gt; () in LineClone.AuthenticatedViewModel.send(action: LineClone.AuthenticatedViewModel.Action) -&gt; ()"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/View/AuthenticationViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
