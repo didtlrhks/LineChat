@@ -22,6 +22,9 @@
 		8E4BB4AC2B525D2A0039FBB7 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4BB4AB2B525D2A0039FBB7 /* GoogleSignInSwift */; };
 		8E4BB4AF2B525E1E0039FBB7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4AE2B525E1E0039FBB7 /* User.swift */; };
 		8E4BB4B12B525E7F0039FBB7 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4B02B525E7F0039FBB7 /* ServiceError.swift */; };
+		8E6BBDB52B53B8A900317EDA /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDB42B53B8A900317EDA /* MainTabType.swift */; };
+		8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */; };
+		8E6BBDC02B53BA6600317EDA /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDBF2B53BA6600317EDA /* ChatListView.swift */; };
 		8EA7802E2B51523D00ADE621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
@@ -64,6 +67,9 @@
 		8E4BB4A62B5253CC0039FBB7 /* LoginButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonStyle.swift; sourceTree = "<group>"; };
 		8E4BB4AE2B525E1E0039FBB7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8E4BB4B02B525E7F0039FBB7 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		8E6BBDB42B53B8A900317EDA /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
+		8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8E6BBDBF2B53BA6600317EDA /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA7802F2B5152B200ADE621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +135,8 @@
 		8E4BB48D2B51557D0039FBB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E6BBDB72B53B9F500317EDA /* ChatList */,
+				8E6BBDB62B53B9F200317EDA /* Home */,
 				8E4BB49F2B5163260039FBB7 /* MainTab */,
 				8E4BB49E2B5163190039FBB7 /* Login */,
 				8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */,
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4BB4A22B5163740039FBB7 /* MainTabView.swift */,
+				8E6BBDB42B53B8A900317EDA /* MainTabType.swift */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -169,6 +178,22 @@
 				8E4BB4AE2B525E1E0039FBB7 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8E6BBDB62B53B9F200317EDA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8E6BBDB72B53B9F500317EDA /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				8E6BBDBF2B53BA6600317EDA /* ChatListView.swift */,
+			);
+			path = ChatList;
 			sourceTree = "<group>";
 		};
 		8EDA8CEA2B51165500705C9F = {
@@ -386,12 +411,15 @@
 				8E4BB4972B5159A30039FBB7 /* AppDelegate.swift in Sources */,
 				8E4BB4A32B5163740039FBB7 /* MainTabView.swift in Sources */,
 				8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */,
+				8E6BBDB52B53B8A900317EDA /* MainTabType.swift in Sources */,
 				8E4BB4A72B5253CC0039FBB7 /* LoginButtonStyle.swift in Sources */,
 				8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */,
 				8E4BB4A52B52522D0039FBB7 /* LoginView.swift in Sources */,
 				8E4BB49B2B5160460039FBB7 /* AuthenticationService.swift in Sources */,
+				8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */,
 				8E4BB4B12B525E7F0039FBB7 /* ServiceError.swift in Sources */,
 				8E4BB4A12B5163500039FBB7 /* LoginIntroView.swift in Sources */,
+				8E6BBDC02B53BA6600317EDA /* ChatListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
