@@ -7,93 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "63E3607F-015A-466C-B2D7-AE0DB5DC29E3"
+            uuid = "5406E608-6C6A-4F40-BA5B-ACDFE6BF034F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LineClone/AppDelegate.swift"
+            filePath = "LineClone/Repository/UserDBRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CE644F3B-758B-4D51-ACFB-EBDD176C1C5A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "signInWithGoogle(completion:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "addUser(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CE644F3B-758B-4D51-ACFB-EBDD176C1C5A - 6f3f4c0b36ed3d7d"
+                  uuid = "5406E608-6C6A-4F40-BA5B-ACDFE6BF034F - 27c596740991a0d7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.GIDSignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.signInWithGoogle(completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (Any) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUser(LineClone.UserObject) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
                   moduleName = "LineClone"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "184">
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "149">
                </Location>
                <Location
-                  uuid = "CE644F3B-758B-4D51-ACFB-EBDD176C1C5A - 6f3f4c0b36ed3d7d"
+                  uuid = "5406E608-6C6A-4F40-BA5B-ACDFE6BF034F - 27c596740991a0d7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.GIDSignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.signInWithGoogle(completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (Any) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUser(LineClone.UserObject) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
                   moduleName = "LineClone"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "548">
-               </Location>
-               <Location
-                  uuid = "CE644F3B-758B-4D51-ACFB-EBDD176C1C5A - 6f3f4c0b36ed3d7d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.GIDSignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.signInWithGoogle(completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "CE644F3B-758B-4D51-ACFB-EBDD176C1C5A - 6f3f4c0b36ed3d7d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.GIDSignInResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.signInWithGoogle(completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "564">
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "216">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -101,318 +55,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9B79E87E-1007-4995-B2C9-9E4DEF8FAE1F"
+            uuid = "495F48F5-6E3A-4755-AA75-0DD992AE4E3E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
+            filePath = "LineClone/Repository/UserDBRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "signInWithGoogle(completion:)"
-            landmarkType = "7">
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "db"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E3AE571-9B3A-4009-9FBA-FFCBC83624A2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "authenticateUserWithFirebase(credential:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1E3AE571-9B3A-4009-9FBA-FFCBC83624A2 - 64470c7a9e096c1a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LineClone.AuthenticationService.authenticateUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "1E3AE571-9B3A-4009-9FBA-FFCBC83624A2 - 228b2016d6a0c1a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.authenticateUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "344">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "540D1AA4-8F60-4D04-A7C4-9AF933A38A04"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "authenticateUserWithFirebase(credential:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "540D1AA4-8F60-4D04-A7C4-9AF933A38A04 - 228b2016d6a0c16e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.authenticateUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "364">
-               </Location>
-               <Location
-                  uuid = "540D1AA4-8F60-4D04-A7C4-9AF933A38A04 - 228b2016d6a0c16e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.authenticateUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "452">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6C2921B5-40BD-4593-AFF6-BB4AED03FCC1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "authenticateUserWithFirebase(credential:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6C2921B5-40BD-4593-AFF6-BB4AED03FCC1 - 228b2016d6a0c16e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.authenticateUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "364">
-               </Location>
-               <Location
-                  uuid = "6C2921B5-40BD-4593-AFF6-BB4AED03FCC1 - 228b2016d6a0c16e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LineClone.AuthenticationService.authenticateUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "452">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CBEA9BB3-F191-431A-A388-989F8649A7CF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "signInWithGoogle(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "82482645-EAEC-4068-B53D-DEC017F11FF7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "signInWithGoogle(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "599F0E03-9588-4594-8035-DD036B9A921B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "signInWithGoogle(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CA99303B-DA13-44BF-A2E0-0B96BB7A77E6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "authenticateUserWithFirebase(credential:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B1FA7186-C153-4EE7-A37F-012B28BC4970"
+            uuid = "F04D127E-891F-432B-83C9-A533C65BCE2B"
             shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "authenticateUserWithFirebase(credential:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B2761D0D-74FB-4A5E-9E93-FDECE3194118"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LineClone/Service/AuthenticationService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "signInWithGoogle()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B2761D0D-74FB-4A5E-9E93-FDECE3194118 - 49917b21f08ce565"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;LineClone.User, LineClone.ServiceError&gt;) -&gt; ()) -&gt; () in LineClone.AuthenticationService.signInWithGoogle() -&gt; Combine.AnyPublisher&lt;LineClone.User, LineClone.ServiceError&gt;"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "B2761D0D-74FB-4A5E-9E93-FDECE3194118 - 49917b21f08ce565"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;LineClone.User, LineClone.ServiceError&gt;) -&gt; ()) -&gt; () in LineClone.AuthenticationService.signInWithGoogle() -&gt; Combine.AnyPublisher&lt;LineClone.User, LineClone.ServiceError&gt;"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "B2761D0D-74FB-4A5E-9E93-FDECE3194118 - 49917b21f08ce565"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;LineClone.User, Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;LineClone.User, LineClone.ServiceError&gt;) -&gt; ()) -&gt; () in LineClone.AuthenticationService.signInWithGoogle() -&gt; Combine.AnyPublisher&lt;LineClone.User, LineClone.ServiceError&gt;"
-                  moduleName = "LineClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/AuthenticationService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "636">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "510B4FA6-4EB7-412C-A0FF-CABCD44C87A1"
-            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LineClone/View/AuthenticationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "send(action:)"
             landmarkType = "7">
          </BreakpointContent>

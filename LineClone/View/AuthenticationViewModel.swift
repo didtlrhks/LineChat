@@ -54,7 +54,8 @@ class AuthenticatedViewModel : ObservableObject {
             
                 .flatMap{
                     user in
-                    self.container.services.authService.signInWithGoogle()
+                    self.container.services.userServices.addUser(user)
+                    
                 }
                 .sink{ [weak self] completion in
                     

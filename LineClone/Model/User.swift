@@ -25,9 +25,6 @@ extension User {
             profileURL :profileURL,
             description : description
         
-        
-        
-        
         )
     }
 }
