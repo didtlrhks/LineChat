@@ -25,6 +25,7 @@
 		8E6BBDB52B53B8A900317EDA /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDB42B53B8A900317EDA /* MainTabType.swift */; };
 		8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */; };
 		8E6BBDC02B53BA6600317EDA /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDBF2B53BA6600317EDA /* ChatListView.swift */; };
+		8E6BBDC22B53BD9700317EDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDC12B53BD9700317EDA /* HomeViewModel.swift */; };
 		8EA7802E2B51523D00ADE621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
@@ -70,6 +71,7 @@
 		8E6BBDB42B53B8A900317EDA /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
 		8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8E6BBDBF2B53BA6600317EDA /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		8E6BBDC12B53BD9700317EDA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA7802F2B5152B200ADE621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */,
+				8E6BBDC12B53BD9700317EDA /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4BB4AF2B525E1E0039FBB7 /* User.swift in Sources */,
+				8E6BBDC22B53BD9700317EDA /* HomeViewModel.swift in Sources */,
 				8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */,
 				8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */,
 				8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */,

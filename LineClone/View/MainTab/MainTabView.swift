@@ -18,7 +18,7 @@ struct MainTabView: View {
                 Group {
                     switch tab {
                     case .home:
-                        HomeView()
+                        HomeView(viewModel: .init() )
                     case .chat:
                         ChatListView()
                     case .phone:
