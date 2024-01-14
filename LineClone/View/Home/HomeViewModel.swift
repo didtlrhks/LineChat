@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 
 class HomeViewModel : ObservableObject {
@@ -19,6 +20,7 @@ class HomeViewModel : ObservableObject {
     
     private var container : DIContainer
     private var userId : String
+    private var subscriptions = Set<AnyCancellable>()
     
     init(container : DIContainer,userId : String){
         self.container = container
@@ -29,7 +31,12 @@ class HomeViewModel : ObservableObject {
         switch action {
         case .getUser:
             
-            return
+            container.services.userServices.getUser(userId: userId)
+                .sink {
+                    completion in
+                } receiveValue: { [weak self] user in
+                    self?.myUser = user
+                }.store(in: &subscriptions)
         }
     }
 }

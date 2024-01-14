@@ -57,6 +57,9 @@ struct HomeView: View {
                     Image("settings")
                 }
             }
+            .onAppear {
+                viewModel.send(action: .getUser)
+            }
         }
     }
     var profileView: some View {
