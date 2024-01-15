@@ -14,10 +14,14 @@ class HomeViewModel : ObservableObject {
     
     enum Action {
         case load
+        case presentMyProfileView
+        case presentOtherProfileView(String)
+        
     }
     @Published var myUser : User?
     @Published var users: [User] = []
     @Published var phase : Phase = .notRequest
+    @Published var modalDestination : HomeModalDestination?
     
     private var container : DIContainer
     private var userId : String
@@ -51,13 +55,17 @@ class HomeViewModel : ObservableObject {
                     self?.phase = .success
                     self?.users = users
                 }.store(in: &subscriptions)
+ 
+        case .presentMyProfileView:
+            modalDestination = .myProfile
             
-//                .sink {  
-//                    completion in
-//                } receiveValue: { [weak self] user in
-//                    self?.myUser = user
-//                }.store(in: &subscriptions)
+            
+            
+        case let .presentOtherProfileView(userId):
+            modalDestination = .otherProfile(userId)
         }
+        
+    
     }
 }
 

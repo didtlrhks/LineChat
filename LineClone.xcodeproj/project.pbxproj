@@ -37,6 +37,9 @@
 		8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B94A2B55133900DDA888 /* PlaceholderView.swift */; };
 		8ED0B94D2B5513BA00DDA888 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B94C2B5513BA00DDA888 /* LoadingView.swift */; };
 		8ED0B94F2B55144100DDA888 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B94E2B55144100DDA888 /* ErrorView.swift */; };
+		8ED0B9512B5515F200DDA888 /* HomeModalDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9502B5515F200DDA888 /* HomeModalDestination.swift */; };
+		8ED0B9542B5516A900DDA888 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9532B5516A900DDA888 /* MyProfileView.swift */; };
+		8ED0B9562B5516B900DDA888 /* OtherProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
 		8EDA8CFB2B51165700705C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDA8CFA2B51165700705C9F /* Assets.xcassets */; };
@@ -93,6 +96,9 @@
 		8ED0B94A2B55133900DDA888 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		8ED0B94C2B5513BA00DDA888 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8ED0B94E2B55144100DDA888 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		8ED0B9502B5515F200DDA888 /* HomeModalDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModalDestination.swift; sourceTree = "<group>"; };
+		8ED0B9532B5516A900DDA888 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileView.swift; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDA8CF62B51165500705C9F /* LineCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCloneApp.swift; sourceTree = "<group>"; };
 		8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 		8E4BB48D2B51557D0039FBB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8ED0B9522B55169600DDA888 /* Profile */,
 				8E6BBDB72B53B9F500317EDA /* ChatList */,
 				8E6BBDB62B53B9F200317EDA /* Home */,
 				8E4BB49F2B5163260039FBB7 /* MainTab */,
@@ -213,6 +220,7 @@
 			children = (
 				8E6BBDBD2B53BA5E00317EDA /* HomeView.swift */,
 				8E6BBDC12B53BD9700317EDA /* HomeViewModel.swift */,
+				8ED0B9502B5515F200DDA888 /* HomeModalDestination.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -241,6 +249,15 @@
 				8E6BBDCB2B53D08000317EDA /* UserObject.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		8ED0B9522B55169600DDA888 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8ED0B9532B5516A900DDA888 /* MyProfileView.swift */,
+				8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		8EDA8CEA2B51165500705C9F = {
@@ -457,6 +474,7 @@
 				8E6BBDCE2B53D0D600317EDA /* DBError.swift in Sources */,
 				8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */,
 				8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */,
+				8ED0B9512B5515F200DDA888 /* HomeModalDestination.swift in Sources */,
 				8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */,
 				8EDA8D212B51487700705C9F /* Color+Extension.swift in Sources */,
 				8ED0B94F2B55144100DDA888 /* ErrorView.swift in Sources */,
@@ -466,7 +484,9 @@
 				8E6BBDD02B53D33800317EDA /* Constant.swift in Sources */,
 				8E6BBDB52B53B8A900317EDA /* MainTabType.swift in Sources */,
 				8E4BB4A72B5253CC0039FBB7 /* LoginButtonStyle.swift in Sources */,
+				8ED0B9542B5516A900DDA888 /* MyProfileView.swift in Sources */,
 				8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */,
+				8ED0B9562B5516B900DDA888 /* OtherProfileView.swift in Sources */,
 				8E4BB4A52B52522D0039FBB7 /* LoginView.swift in Sources */,
 				8E4BB49B2B5160460039FBB7 /* AuthenticationService.swift in Sources */,
 				8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */,

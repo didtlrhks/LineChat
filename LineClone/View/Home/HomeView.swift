@@ -13,6 +13,16 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             contentView
+                .fullScreenCover(item: $viewModel.modalDestination) {
+                    switch $0 {
+                        
+                        
+                    case .myProfile :
+                        MyProfileView()
+                    case let .otherProfile(userId):
+                        OtherProfileView()
+                    }
+                }
         }
     }
     
@@ -29,6 +39,17 @@ struct HomeView: View {
             LoadingView()
         case .success:
             loadedView
+                .toolbar{
+                    Image("bookmark")
+                    Image("notifications")
+                    Image("person_add")
+                    
+                    Button{
+                        
+                    } label: {
+                        Image("settings")
+                    }
+                }
         case .fail:
             ErrorView()
         }
@@ -53,32 +74,28 @@ struct HomeView: View {
                 Spacer(minLength: 89)
                 emptyView
             } else {
-                ForEach(viewModel.users, id: \.id) {
-                    user in
-                    HStack(spacing: 8){
-                        Image("person")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .clipShape(Circle())
-                        Text(user.name)
-                            .font(.system(size:12))
-                            .foregroundColor(.bkext)
-                        Spacer()
+                LazyVStack{
+                    ForEach(viewModel.users, id: \.id) {
+                        user in
+                        Button {
+                            viewModel.send(action: .presentOtherProfileView(user.id))
+                        } label: {
+                            HStack(spacing: 8){
+                                Image("person")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
+                                Text(user.name)
+                                    .font(.system(size:12))
+                                    .foregroundColor(.bkext)
+                                Spacer()
+                            }
+                        }
+                        .padding(.horizontal,30)
                     }
-                    .padding(.horizontal,30)
                 }
             }
             
-        }.toolbar{
-            Image("bookmark")
-            Image("notifications")
-            Image("person_add")
-            
-            Button{
-                
-            } label: {
-                Image("settings")
-            }
         }
         
     }
@@ -105,6 +122,9 @@ struct HomeView: View {
                 .clipShape(Circle())
         }
         .padding(.horizontal,30)
+        .onTapGesture {
+            viewModel.send(action: .presentMyProfileView)
+        }
     }
     
     var searchButton : some View {

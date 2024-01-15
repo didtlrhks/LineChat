@@ -11,6 +11,7 @@ import Foundation
 protocol ServiceType {
     var authService : AuthenticationServiceType{get set}
     var userServices : UserServiceType{get set}
+  //  var contactService : ContactSerViceType {get set}
 }
 
 

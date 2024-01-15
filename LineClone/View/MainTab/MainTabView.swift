@@ -41,6 +41,20 @@ struct MainTabView: View {
     }
 }
 
-#Preview {
-    MainTabView()
+
+
+struct MainTabView_PreViews : PreviewProvider {
+    
+    static let container = DIContainer(services: StubService())
+    static var previews: some View {
+        MainTabView()
+            .environmentObject(Self.container)
+            .environmentObject(AuthenticatedViewModel(container: Self.container))
+    }
 }
+
+//#Preview {
+//    let container = DIContainer(services: StubService())
+//    MainTabView()
+//        .environmentObject(self.container)
+//}
