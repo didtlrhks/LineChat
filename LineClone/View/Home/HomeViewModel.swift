@@ -14,8 +14,10 @@ class HomeViewModel : ObservableObject {
     
     enum Action {
         case load
+        case requestContacts
         case presentMyProfileView
         case presentOtherProfileView(String)
+       
         
     }
     @Published var myUser : User?
@@ -56,6 +58,17 @@ class HomeViewModel : ObservableObject {
                     self?.users = users
                 }.store(in: &subscriptions)
  
+            
+        case .requestContacts:
+            container.services.contactService.fetchContacts()
+//                .sink {
+//                    completion in
+//                    
+//                } receiveValue: { [weak self] users in
+//                    //todo db -> load
+//                }
+            
+            
         case .presentMyProfileView:
             modalDestination = .myProfile
             
