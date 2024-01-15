@@ -61,12 +61,23 @@ class HomeViewModel : ObservableObject {
             
         case .requestContacts:
             container.services.contactService.fetchContacts()
-//                .sink {
-//                    completion in
-//                    
-//                } receiveValue: { [weak self] users in
-//                    //todo db -> load
-//                }
+                .flatMap {
+                    users in
+                    self.container.services.userServices.addUserAfterContact(users: users)
+                }
+                .flatMap { _ in
+                    self.container.services.userServices.loadUser(id: self.userId)
+                }
+                .sink { [weak self] completion in
+                    if case .failure = completion {
+                        self?.phase = .fail
+                    }
+                }receiveValue: { [weak self] users in
+                    self?.phase = .success
+                    self?.users = users
+                }.store(in: &subscriptions)
+            
+            
             
             
         case .presentMyProfileView:
