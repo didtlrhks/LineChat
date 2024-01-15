@@ -13,10 +13,11 @@ class HomeViewModel : ObservableObject {
     
     
     enum Action {
-        case getUser
+        case load
     }
     @Published var myUser : User?
     @Published var users: [User] = []
+    @Published var phase : Phase = .notRequest
     
     private var container : DIContainer
     private var userId : String
@@ -29,14 +30,33 @@ class HomeViewModel : ObservableObject {
     
     func send(action: Action) {
         switch action {
-        case .getUser:
+        case .load:
+            phase = .loading
             
             container.services.userServices.getUser(userId: userId)
-                .sink {
-                    completion in
-                } receiveValue: { [weak self] user in
+                .handleEvents(receiveOutput :
+                                { [weak self] user in
                     self?.myUser = user
+                })
+                .flatMap{
+                    user in
+                    self.container.services.userServices.loadUser(id: user.id)
+                }
+                .sink { [weak self]completion in
+                    if case .failure = completion {
+                        self?.phase = .fail
+                        
+                    }
+                } receiveValue: { [weak self] users in
+                    self?.phase = .success
+                    self?.users = users
                 }.store(in: &subscriptions)
+            
+//                .sink {
+//                    completion in
+//                } receiveValue: { [weak self] user in
+//                    self?.myUser = user
+//                }.store(in: &subscriptions)
         }
     }
 }

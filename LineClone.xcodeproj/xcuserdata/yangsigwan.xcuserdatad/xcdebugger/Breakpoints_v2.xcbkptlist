@@ -14,8 +14,8 @@
             filePath = "LineClone/Repository/UserDBRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "addUser(_:)"
             landmarkType = "7">
             <Locations>
@@ -62,10 +62,10 @@
             filePath = "LineClone/Repository/UserDBRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "db"
-            landmarkType = "24">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "addUser(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
