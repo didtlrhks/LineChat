@@ -34,6 +34,9 @@
 		8E6BBDD02B53D33800317EDA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BBDCF2B53D33800317EDA /* Constant.swift */; };
 		8EA7802E2B51523D00ADE621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */; };
 		8ED0B9492B5511DF00DDA888 /* Phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9482B5511DF00DDA888 /* Phase.swift */; };
+		8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B94A2B55133900DDA888 /* PlaceholderView.swift */; };
+		8ED0B94D2B5513BA00DDA888 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B94C2B5513BA00DDA888 /* LoadingView.swift */; };
+		8ED0B94F2B55144100DDA888 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B94E2B55144100DDA888 /* ErrorView.swift */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
 		8EDA8CFB2B51165700705C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDA8CFA2B51165700705C9F /* Assets.xcassets */; };
@@ -87,6 +90,9 @@
 		8EA7802D2B51523D00ADE621 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA7802F2B5152B200ADE621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8ED0B9482B5511DF00DDA888 /* Phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase.swift; sourceTree = "<group>"; };
+		8ED0B94A2B55133900DDA888 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		8ED0B94C2B5513BA00DDA888 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8ED0B94E2B55144100DDA888 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDA8CF62B51165500705C9F /* LineCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCloneApp.swift; sourceTree = "<group>"; };
 		8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 				8E4BB4882B5154750039FBB7 /* DIContainer.swift */,
 				8E6BBDCF2B53D33800317EDA /* Constant.swift */,
 				8ED0B9482B5511DF00DDA888 /* Phase.swift */,
+				8ED0B94A2B55133900DDA888 /* PlaceholderView.swift */,
+				8ED0B94C2B5513BA00DDA888 /* LoadingView.swift */,
+				8ED0B94E2B55144100DDA888 /* ErrorView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -450,6 +459,7 @@
 				8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */,
 				8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */,
 				8EDA8D212B51487700705C9F /* Color+Extension.swift in Sources */,
+				8ED0B94F2B55144100DDA888 /* ErrorView.swift in Sources */,
 				8E4BB4972B5159A30039FBB7 /* AppDelegate.swift in Sources */,
 				8E4BB4A32B5163740039FBB7 /* MainTabView.swift in Sources */,
 				8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */,
@@ -462,11 +472,13 @@
 				8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */,
 				8E4BB4B12B525E7F0039FBB7 /* ServiceError.swift in Sources */,
 				8E6BBDC92B53CF0E00317EDA /* UserService.swift in Sources */,
+				8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */,
 				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,
 				8E4BB4A12B5163500039FBB7 /* LoginIntroView.swift in Sources */,
 				8E6BBDC02B53BA6600317EDA /* ChatListView.swift in Sources */,
 				8E6BBDCC2B53D08000317EDA /* UserObject.swift in Sources */,
 				8ED0B9492B5511DF00DDA888 /* Phase.swift in Sources */,
+				8ED0B94D2B5513BA00DDA888 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

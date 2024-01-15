@@ -52,7 +52,7 @@ class HomeViewModel : ObservableObject {
                     self?.users = users
                 }.store(in: &subscriptions)
             
-//                .sink {
+//                .sink {  
 //                    completion in
 //                } receiveValue: { [weak self] user in
 //                    self?.myUser = user
