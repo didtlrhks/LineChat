@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F04D127E-891F-432B-83C9-A533C65BCE2B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LineClone/View/AuthenticationViewModel.swift"
@@ -112,6 +112,274 @@
                   startingLineNumber = "69"
                   endingLineNumber = "69"
                   offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0827CCC4-246D-411D-B4C1-AE1218008BA1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LineClone/Service/ContactService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchContacts(store:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "868FFA27-D638-4097-8C2E-7CBFFFA2D04C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LineClone/Service/ContactService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "fetchContacts(store:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "868FFA27-D638-4097-8C2E-7CBFFFA2D04C - fd8a5e2fd4d6e04d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in LineClone.ContactService.fetchContacts(store: __C.CNContactStore, completion: (Swift.Result&lt;Swift.Array&lt;LineClone.User&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/ContactService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1326">
+               </Location>
+               <Location
+                  uuid = "868FFA27-D638-4097-8C2E-7CBFFFA2D04C - fd8a5e2fd4d6e04d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in LineClone.ContactService.fetchContacts(store: __C.CNContactStore, completion: (Swift.Result&lt;Swift.Array&lt;LineClone.User&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/ContactService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1092">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9CC010F3-2439-4D90-9AF8-22ED3D099583"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LineClone/Service/ContactService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "fetchContacts(store:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9CC010F3-2439-4D90-9AF8-22ED3D099583 - fd8a5e2fd4d6e00b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in LineClone.ContactService.fetchContacts(store: __C.CNContactStore, completion: (Swift.Result&lt;Swift.Array&lt;LineClone.User&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/ContactService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1449">
+               </Location>
+               <Location
+                  uuid = "9CC010F3-2439-4D90-9AF8-22ED3D099583 - fd8a5e2fd4d6e00b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CNContact, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in LineClone.ContactService.fetchContacts(store: __C.CNContactStore, completion: (Swift.Result&lt;Swift.Array&lt;LineClone.User&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Service/ContactService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D11879F-1288-4416-87AB-BD0090F38EBE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LineClone/Repository/UserDBRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "addUserAfterContact(users:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D11879F-1288-4416-87AB-BD0090F38EBE - e2f5d722a36d64c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "8D11879F-1288-4416-87AB-BD0090F38EBE - aa8cdc5d07948f8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "215">
+               </Location>
+               <Location
+                  uuid = "8D11879F-1288-4416-87AB-BD0090F38EBE - e2f5d722a36d64c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "8D11879F-1288-4416-87AB-BD0090F38EBE - aa8cdc5d07948f8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9015CDB-225A-466B-9ADA-B643A5FDA833"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LineClone/Repository/UserDBRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "addUserAfterContact(users:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A9015CDB-225A-466B-9ADA-B643A5FDA833 - aa8cdc5d07948f6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "A9015CDB-225A-466B-9ADA-B643A5FDA833 - 9a3b184ca54c2b8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "A9015CDB-225A-466B-9ADA-B643A5FDA833 - aa8cdc5d07948f6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "A9015CDB-225A-466B-9ADA-B643A5FDA833 - 9a3b184ca54c2b8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in closure #1 ((Swift.Result&lt;(), Swift.Error&gt;) -&gt; ()) -&gt; () in closure #3 (LineClone.UserObject, Swift.Optional&lt;Any&gt;) -&gt; Combine.Future&lt;(), Swift.Error&gt; in LineClone.UserDBRepository.addUserAfterContact(users: Swift.Array&lt;LineClone.UserObject&gt;) -&gt; Combine.AnyPublisher&lt;(), LineClone.DBError&gt;"
+                  moduleName = "LineClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangsigwan/Downloads/LineClone/LineClone/LineClone/Repository/UserDBRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "80">
                </Location>
             </Locations>
          </BreakpointContent>

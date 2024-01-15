@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @EnvironmentObject var container : DIContainer
     @StateObject var viewModel : HomeViewModel
     var body: some View {
         NavigationStack{
@@ -18,7 +18,7 @@ struct HomeView: View {
                         
                         
                     case .myProfile :
-                        MyProfileView()
+                        MyProfileView(viewModel: .init(container: container, userId: viewModel.userId))
                     case let .otherProfile(userId):
                         OtherProfileView()
                     }
@@ -159,7 +159,7 @@ struct HomeView: View {
             .padding(.bottom,30)
             
             Button{
-                
+                viewModel.send(action: .requestContacts)
             } label: {
                 Text("친구추가")
                     .font(.system(size : 14))

@@ -41,6 +41,8 @@
 		8ED0B9542B5516A900DDA888 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9532B5516A900DDA888 /* MyProfileView.swift */; };
 		8ED0B9562B5516B900DDA888 /* OtherProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */; };
 		8ED0B9582B551E6500DDA888 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9572B551E6500DDA888 /* ContactService.swift */; };
+		8ED0B95A2B556BB200DDA888 /* MyprofileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9592B556BB200DDA888 /* MyprofileViewModel.swift */; };
+		8ED0B95C2B556F8200DDA888 /* MyProfileMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B95B2B556F8200DDA888 /* MyProfileMenuType.swift */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
 		8EDA8CFB2B51165700705C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDA8CFA2B51165700705C9F /* Assets.xcassets */; };
@@ -101,6 +103,8 @@
 		8ED0B9532B5516A900DDA888 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileView.swift; sourceTree = "<group>"; };
 		8ED0B9572B551E6500DDA888 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
+		8ED0B9592B556BB200DDA888 /* MyprofileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileViewModel.swift; sourceTree = "<group>"; };
+		8ED0B95B2B556F8200DDA888 /* MyProfileMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMenuType.swift; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDA8CF62B51165500705C9F /* LineCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCloneApp.swift; sourceTree = "<group>"; };
 		8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 			children = (
 				8ED0B9532B5516A900DDA888 /* MyProfileView.swift */,
 				8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */,
+				8ED0B9592B556BB200DDA888 /* MyprofileViewModel.swift */,
+				8ED0B95B2B556F8200DDA888 /* MyProfileMenuType.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -494,7 +500,9 @@
 				8E4BB4A52B52522D0039FBB7 /* LoginView.swift in Sources */,
 				8E4BB49B2B5160460039FBB7 /* AuthenticationService.swift in Sources */,
 				8E6BBDBE2B53BA5E00317EDA /* HomeView.swift in Sources */,
+				8ED0B95A2B556BB200DDA888 /* MyprofileViewModel.swift in Sources */,
 				8E4BB4B12B525E7F0039FBB7 /* ServiceError.swift in Sources */,
+				8ED0B95C2B556F8200DDA888 /* MyProfileMenuType.swift in Sources */,
 				8E6BBDC92B53CF0E00317EDA /* UserService.swift in Sources */,
 				8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */,
 				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,
