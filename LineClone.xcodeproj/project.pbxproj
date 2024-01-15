@@ -40,6 +40,7 @@
 		8ED0B9512B5515F200DDA888 /* HomeModalDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9502B5515F200DDA888 /* HomeModalDestination.swift */; };
 		8ED0B9542B5516A900DDA888 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9532B5516A900DDA888 /* MyProfileView.swift */; };
 		8ED0B9562B5516B900DDA888 /* OtherProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */; };
+		8ED0B9582B551E6500DDA888 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0B9572B551E6500DDA888 /* ContactService.swift */; };
 		8EDA8CF72B51165500705C9F /* LineCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF62B51165500705C9F /* LineCloneApp.swift */; };
 		8EDA8CF92B51165500705C9F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */; };
 		8EDA8CFB2B51165700705C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDA8CFA2B51165700705C9F /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		8ED0B9502B5515F200DDA888 /* HomeModalDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModalDestination.swift; sourceTree = "<group>"; };
 		8ED0B9532B5516A900DDA888 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileView.swift; sourceTree = "<group>"; };
+		8ED0B9572B551E6500DDA888 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		8EDA8CF32B51165500705C9F /* LineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDA8CF62B51165500705C9F /* LineCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCloneApp.swift; sourceTree = "<group>"; };
 		8EDA8CF82B51165500705C9F /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				8E4BB49A2B5160460039FBB7 /* AuthenticationService.swift */,
 				8E4BB4B02B525E7F0039FBB7 /* ServiceError.swift */,
 				8E6BBDC82B53CF0E00317EDA /* UserService.swift */,
+				8ED0B9572B551E6500DDA888 /* ContactService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				8ED0B9512B5515F200DDA888 /* HomeModalDestination.swift in Sources */,
 				8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */,
 				8EDA8D212B51487700705C9F /* Color+Extension.swift in Sources */,
+				8ED0B9582B551E6500DDA888 /* ContactService.swift in Sources */,
 				8ED0B94F2B55144100DDA888 /* ErrorView.swift in Sources */,
 				8E4BB4972B5159A30039FBB7 /* AppDelegate.swift in Sources */,
 				8E4BB4A32B5163740039FBB7 /* MainTabView.swift in Sources */,
@@ -666,6 +670,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LineClone/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "친구 목록을 가져옵니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -696,6 +701,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LineClone/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "친구 목록을 가져옵니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
