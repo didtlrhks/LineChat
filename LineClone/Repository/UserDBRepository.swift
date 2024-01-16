@@ -15,6 +15,7 @@ protocol UserDBRepositoryType {
     func getUser(userId:String ) async throws -> UserObject
     func loadUser() -> AnyPublisher<[UserObject], DBError>
     func addUserAfterContact(users : [UserObject]) -> AnyPublisher<Void , DBError >
+    func updateUser(userId:String , key: String,value:Any) async throws
     
 }
 
@@ -83,6 +84,10 @@ class UserDBRepository: UserDBRepositoryType {
         let data = try JSONSerialization.data(withJSONObject: value)
         let userObject = try JSONDecoder().decode(UserObject.self ,from: data)
         return userObject
+    }
+    
+    func updateUser(userId:String , key: String,value:Any) async throws {
+        try await self.db.child(DBKey.Users).child(userId).child(key).setValue(value)
     }
     
     func loadUser() -> AnyPublisher<[UserObject], DBError> {

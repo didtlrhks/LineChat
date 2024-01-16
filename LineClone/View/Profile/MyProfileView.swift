@@ -78,7 +78,10 @@ struct MyProfileView: View {
         }
         .sheet(isPresented: $viewModel.isPresentedDescEditView) {
             MyProfileDescEditView(description:viewModel.userInfo?.description ?? "") {
-                willBeDes in
+                willBeDesc in
+                Task {
+                    await viewModel.updateDescription(willBeDesc)
+                }
             }
         }
     }

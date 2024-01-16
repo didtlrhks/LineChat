@@ -24,4 +24,12 @@ class MyprofileViewModel : ObservableObject {
             
         }
     }
+    func updateDescription(_ description: String) async {
+        do{
+            try await container.services.userServices.updateDescription(userId: userId, description: description)
+            userInfo?.description = description
+        } catch {
+            
+        }
+    }
 }
