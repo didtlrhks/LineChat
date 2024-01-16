@@ -15,7 +15,9 @@ class MyprofileViewModel : ObservableObject {
     @Published var imageSelection : PhotosPickerItem?{
         
         didSet{
-            
+            Task{
+                await updateProfileImage(pickerItem: imageSelection)
+            }
         }
     }
     
@@ -38,6 +40,15 @@ class MyprofileViewModel : ObservableObject {
         do{
             try await container.services.userServices.updateDescription(userId: userId, description: description)
             userInfo?.description = description
+        } catch {
+            
+        }
+    }
+    func updateProfileImage(pickerItem:PhotosPickerItem?) async {
+        guard let pickerItem else {return}
+        do{
+            
+        let data = try await container.services.photoPickerService.loadTransferable(from: pickerItem)
         } catch {
             
         }

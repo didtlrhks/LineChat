@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E15C7352B565AA1001468C7 /* MyProfileDescEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7342B565AA1001468C7 /* MyProfileDescEditView.swift */; };
 		8E15C7372B567063001468C7 /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7362B567063001468C7 /* PhotoPickerService.swift */; };
+		8E15C73A2B56727D001468C7 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7392B56727D001468C7 /* PhotoImage.swift */; };
 		8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4882B5154750039FBB7 /* DIContainer.swift */; };
 		8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48B2B5154AA0039FBB7 /* Services.swift */; };
 		8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		8E15C7342B565AA1001468C7 /* MyProfileDescEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileDescEditView.swift; sourceTree = "<group>"; };
 		8E15C7362B567063001468C7 /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
+		8E15C7392B56727D001468C7 /* PhotoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
 		8E4BB4882B5154750039FBB7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E4BB48B2B5154AA0039FBB7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -152,6 +154,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E15C7382B567262001468C7 /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8E15C7362B567063001468C7 /* PhotoPickerService.swift */,
+				8E15C7392B56727D001468C7 /* PhotoImage.swift */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
 		8E4BB4872B51545B0039FBB7 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,12 +179,12 @@
 		8E4BB48A2B51549D0039FBB7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8E15C7382B567262001468C7 /* PhotoPicker */,
 				8E4BB48B2B5154AA0039FBB7 /* Services.swift */,
 				8E4BB49A2B5160460039FBB7 /* AuthenticationService.swift */,
 				8E4BB4B02B525E7F0039FBB7 /* ServiceError.swift */,
 				8E6BBDC82B53CF0E00317EDA /* UserService.swift */,
 				8ED0B9572B551E6500DDA888 /* ContactService.swift */,
-				8E15C7362B567063001468C7 /* PhotoPickerService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -488,6 +499,7 @@
 				8E6BBDC22B53BD9700317EDA /* HomeViewModel.swift in Sources */,
 				8E6BBDCE2B53D0D600317EDA /* DBError.swift in Sources */,
 				8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */,
+				8E15C73A2B56727D001468C7 /* PhotoImage.swift in Sources */,
 				8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */,
 				8ED0B9512B5515F200DDA888 /* HomeModalDestination.swift in Sources */,
 				8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */,
