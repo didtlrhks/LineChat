@@ -16,4 +16,11 @@ class MyprofileViewModel : ObservableObject {
         self.container = container
         self.userId =  userId
     }
+    
+    func getUser() async {
+        if let user = try? await container.services.userServices.getUser(userId: userId) {
+            userInfo = user
+            
+        }
+    }
 }

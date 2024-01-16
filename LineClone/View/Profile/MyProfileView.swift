@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MyProfileView: View {
-    
+    @Environment(\.dismiss) var dismiss
     @StateObject var viewModel : MyprofileViewModel
     var body: some View {
         NavigationStack{
@@ -30,15 +30,28 @@ struct MyProfileView: View {
                     descriptionView
                     Spacer()
                     menuView
+                        .padding(.bottom,58)
                     
                 }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button {
+                        dismiss()
+                    }label: {
+                        Image("close")
+                    }
+                }
+            }
+            .task {
+                await viewModel.getUser()
             }
         }
     }
     
     var profileView: some View {
         Button {
-            
+            //TODO: 
         } label: {
             Image("person")
                 .resizable()
