@@ -9,6 +9,7 @@ import Foundation
 
 class MyprofileViewModel : ObservableObject {
     @Published var userInfo : User?
+    @Published var isPresentedDescEditView : Bool = false
     private var container : DIContainer
     private let userId : String
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E15C7352B565AA1001468C7 /* MyProfileDescEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7342B565AA1001468C7 /* MyProfileDescEditView.swift */; };
 		8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4882B5154750039FBB7 /* DIContainer.swift */; };
 		8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48B2B5154AA0039FBB7 /* Services.swift */; };
 		8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E15C7342B565AA1001468C7 /* MyProfileDescEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileDescEditView.swift; sourceTree = "<group>"; };
 		8E4BB4882B5154750039FBB7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E4BB48B2B5154AA0039FBB7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				8ED0B9552B5516B900DDA888 /* OtherProfileView.swift */,
 				8ED0B9592B556BB200DDA888 /* MyprofileViewModel.swift */,
 				8ED0B95B2B556F8200DDA888 /* MyProfileMenuType.swift */,
+				8E15C7342B565AA1001468C7 /* MyProfileDescEditView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				8ED0B95A2B556BB200DDA888 /* MyprofileViewModel.swift in Sources */,
 				8E4BB4B12B525E7F0039FBB7 /* ServiceError.swift in Sources */,
 				8ED0B95C2B556F8200DDA888 /* MyProfileMenuType.swift in Sources */,
+				8E15C7352B565AA1001468C7 /* MyProfileDescEditView.swift in Sources */,
 				8E6BBDC92B53CF0E00317EDA /* UserService.swift in Sources */,
 				8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */,
 				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,
