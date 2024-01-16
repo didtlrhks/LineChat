@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import PhotosUI
+import SwiftUI
 
 class MyprofileViewModel : ObservableObject {
     @Published var userInfo : User?
     @Published var isPresentedDescEditView : Bool = false
+    @Published var imageSelection : PhotosPickerItem?
+    
     private var container : DIContainer
     private let userId : String
+    
     
     init(container: DIContainer,userId : String) {
         self.container = container

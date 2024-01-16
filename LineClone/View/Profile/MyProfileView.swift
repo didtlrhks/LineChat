@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct MyProfileView: View {
     @Environment(\.dismiss) var dismiss
@@ -50,9 +51,8 @@ struct MyProfileView: View {
     }
     
     var profileView: some View {
-        Button {
-            //TODO: 
-        } label: {
+        
+        PhotosPicker(selection: $viewModel.imageSelection,matching: .images){
             Image("person")
                 .resizable()
                 .frame(width: 80,height: 80)
