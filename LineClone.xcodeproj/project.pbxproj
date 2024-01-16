@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E15C7352B565AA1001468C7 /* MyProfileDescEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7342B565AA1001468C7 /* MyProfileDescEditView.swift */; };
+		8E15C7372B567063001468C7 /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7362B567063001468C7 /* PhotoPickerService.swift */; };
 		8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4882B5154750039FBB7 /* DIContainer.swift */; };
 		8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48B2B5154AA0039FBB7 /* Services.swift */; };
 		8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */; };
@@ -74,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		8E15C7342B565AA1001468C7 /* MyProfileDescEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileDescEditView.swift; sourceTree = "<group>"; };
+		8E15C7362B567063001468C7 /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
 		8E4BB4882B5154750039FBB7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E4BB48B2B5154AA0039FBB7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				8E4BB4B02B525E7F0039FBB7 /* ServiceError.swift */,
 				8E6BBDC82B53CF0E00317EDA /* UserService.swift */,
 				8ED0B9572B551E6500DDA888 /* ContactService.swift */,
+				8E15C7362B567063001468C7 /* PhotoPickerService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				8ED0B95C2B556F8200DDA888 /* MyProfileMenuType.swift in Sources */,
 				8E15C7352B565AA1001468C7 /* MyProfileDescEditView.swift in Sources */,
 				8E6BBDC92B53CF0E00317EDA /* UserService.swift in Sources */,
+				8E15C7372B567063001468C7 /* PhotoPickerService.swift in Sources */,
 				8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */,
 				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,
 				8E4BB4A12B5163500039FBB7 /* LoginIntroView.swift in Sources */,

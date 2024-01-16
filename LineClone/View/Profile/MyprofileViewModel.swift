@@ -12,7 +12,12 @@ import SwiftUI
 class MyprofileViewModel : ObservableObject {
     @Published var userInfo : User?
     @Published var isPresentedDescEditView : Bool = false
-    @Published var imageSelection : PhotosPickerItem?
+    @Published var imageSelection : PhotosPickerItem?{
+        
+        didSet{
+            
+        }
+    }
     
     private var container : DIContainer
     private let userId : String
