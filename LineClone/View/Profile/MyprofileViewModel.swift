@@ -49,6 +49,7 @@ class MyprofileViewModel : ObservableObject {
         do{
             
         let data = try await container.services.photoPickerService.loadTransferable(from: pickerItem)
+        let url = try await container.services.uploadService.uploadImage(source: .profile(userId: userId), data: data)
         } catch {
             
         }
