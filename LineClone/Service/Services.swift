@@ -33,7 +33,7 @@ class Services : ServiceType {
         self.contactService = ContactService()
         self.photoPickerService = PhotoPickerService()
         self.uploadService = UploadService(provider:UploadProvider())
-        self.imageCacheService = ImageCacheService()
+        self.imageCacheService = ImageCacheService(memoryStorage: MemoryStorage(), diskStorage: DiskStorage())
     }
 }
 
