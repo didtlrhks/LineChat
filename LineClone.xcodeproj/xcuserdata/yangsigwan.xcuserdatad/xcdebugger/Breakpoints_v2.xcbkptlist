@@ -388,7 +388,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "82CCD3D0-6233-4E56-BDA8-0739CD467B2E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LineClone/Service/PhotoPicker/PhotoPickerService.swift"
@@ -397,6 +397,22 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "loadTransferable(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16A5CF2D-9E39-461F-8FF8-B4594BBD1D75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LineClone/View/Profile/MyprofileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "updateProfileImage(pickerItem:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
