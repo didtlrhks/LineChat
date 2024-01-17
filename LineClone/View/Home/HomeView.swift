@@ -20,7 +20,10 @@ struct HomeView: View {
                     case .myProfile :
                         MyProfileView(viewModel: .init(container: container, userId: viewModel.userId))
                     case let .otherProfile(userId):
-                        OtherProfileView(viewModel: .init(container: container, userId: userId))
+                        OtherProfileView(viewModel: .init(container: container, userId: userId)){ otherUserInfo in
+                            
+                            
+                        }
                     }
                 }
         }

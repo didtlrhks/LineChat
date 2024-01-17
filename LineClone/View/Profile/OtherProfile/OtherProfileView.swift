@@ -13,7 +13,7 @@ struct OtherProfileView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: OtherProfileViewModel
     
-   // var goToChat: (User) -> Void
+    var goToChat: (User) -> Void
     
     var body: some View {
         NavigationStack {
@@ -61,7 +61,7 @@ struct OtherProfileView: View {
                 Button {
                     if menu == .chat, let userInfo = viewModel.userInfo {
                         dismiss()
-                     //   goToChat(userInfo)
+                        goToChat(userInfo)
                     }
                 } label: {
                     VStack(alignment: .center) {
@@ -80,6 +80,8 @@ struct OtherProfileView: View {
 
 struct OtherProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        OtherProfileView(viewModel : .init(container: DIContainer(services: StubService()), userId: "user2_id"))
+        OtherProfileView(viewModel : .init(container: DIContainer(services: StubService()), userId: "user2_id")) {
+            _ in
+        }
     }
 }
