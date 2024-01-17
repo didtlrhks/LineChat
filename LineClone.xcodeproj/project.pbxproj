@@ -15,6 +15,9 @@
 		8E15C7412B5795A2001468C7 /* UploadProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7402B5795A2001468C7 /* UploadProvider.swift */; };
 		8E15C7432B579688001468C7 /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7422B579688001468C7 /* UploadService.swift */; };
 		8E15C7462B579767001468C7 /* UploadSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7452B579767001468C7 /* UploadSourceType.swift */; };
+		8E15C7482B579EA8001468C7 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7472B579EA8001468C7 /* ImageCacheService.swift */; };
+		8E15C74B2B57A0AC001468C7 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C74A2B57A0AC001468C7 /* MemoryStorage.swift */; };
+		8E15C74D2B57A17E001468C7 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C74C2B57A17E001468C7 /* DiskStorage.swift */; };
 		8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4882B5154750039FBB7 /* DIContainer.swift */; };
 		8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48B2B5154AA0039FBB7 /* Services.swift */; };
 		8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */; };
@@ -86,6 +89,9 @@
 		8E15C7402B5795A2001468C7 /* UploadProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProvider.swift; sourceTree = "<group>"; };
 		8E15C7422B579688001468C7 /* UploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
 		8E15C7452B579767001468C7 /* UploadSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSourceType.swift; sourceTree = "<group>"; };
+		8E15C7472B579EA8001468C7 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
+		8E15C74A2B57A0AC001468C7 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		8E15C74C2B57A17E001468C7 /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
 		8E4BB4882B5154750039FBB7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E4BB48B2B5154AA0039FBB7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -185,8 +191,19 @@
 			isa = PBXGroup;
 			children = (
 				8E15C7452B579767001468C7 /* UploadSourceType.swift */,
+				8E15C7422B579688001468C7 /* UploadService.swift */,
 			);
 			path = Upload;
+			sourceTree = "<group>";
+		};
+		8E15C7492B57A088001468C7 /* ImageChche */ = {
+			isa = PBXGroup;
+			children = (
+				8E15C7472B579EA8001468C7 /* ImageCacheService.swift */,
+				8E15C74A2B57A0AC001468C7 /* MemoryStorage.swift */,
+				8E15C74C2B57A17E001468C7 /* DiskStorage.swift */,
+			);
+			path = ImageChche;
 			sourceTree = "<group>";
 		};
 		8E4BB4872B51545B0039FBB7 /* General */ = {
@@ -205,6 +222,7 @@
 		8E4BB48A2B51549D0039FBB7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8E15C7492B57A088001468C7 /* ImageChche */,
 				8E15C7442B579751001468C7 /* Upload */,
 				8E15C7382B567262001468C7 /* PhotoPicker */,
 				8E4BB48B2B5154AA0039FBB7 /* Services.swift */,
@@ -212,7 +230,6 @@
 				8E4BB4B02B525E7F0039FBB7 /* ServiceError.swift */,
 				8E6BBDC82B53CF0E00317EDA /* UserService.swift */,
 				8ED0B9572B551E6500DDA888 /* ContactService.swift */,
-				8E15C7422B579688001468C7 /* UploadService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -531,8 +548,10 @@
 				8E6BBDCE2B53D0D600317EDA /* DBError.swift in Sources */,
 				8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */,
 				8E15C73A2B56727D001468C7 /* PhotoImage.swift in Sources */,
+				8E15C74B2B57A0AC001468C7 /* MemoryStorage.swift in Sources */,
 				8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */,
 				8ED0B9512B5515F200DDA888 /* HomeModalDestination.swift in Sources */,
+				8E15C74D2B57A17E001468C7 /* DiskStorage.swift in Sources */,
 				8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */,
 				8EDA8D212B51487700705C9F /* Color+Extension.swift in Sources */,
 				8ED0B9582B551E6500DDA888 /* ContactService.swift in Sources */,
@@ -560,6 +579,7 @@
 				8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */,
 				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,
 				8E15C7462B579767001468C7 /* UploadSourceType.swift in Sources */,
+				8E15C7482B579EA8001468C7 /* ImageCacheService.swift in Sources */,
 				8E4BB4A12B5163500039FBB7 /* LoginIntroView.swift in Sources */,
 				8E6BBDC02B53BA6600317EDA /* ChatListView.swift in Sources */,
 				8E6BBDCC2B53D08000317EDA /* UserObject.swift in Sources */,

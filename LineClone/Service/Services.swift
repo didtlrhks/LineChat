@@ -14,6 +14,7 @@ protocol ServiceType {
     var contactService : ContactServiceType {get set}
     var photoPickerService : PhotoPickerServiceType {get set}
     var uploadService : UploadServiceType{get set}
+    var imageCacheService : ImageCacheServiceType{get set}
     
 }
 
@@ -24,6 +25,7 @@ class Services : ServiceType {
     var contactService: ContactServiceType
     var photoPickerService: PhotoPickerServiceType
     var uploadService: UploadServiceType
+    var imageCacheService : ImageCacheServiceType
     
     init() {
         self.authService = AuthenticationService()
@@ -31,6 +33,7 @@ class Services : ServiceType {
         self.contactService = ContactService()
         self.photoPickerService = PhotoPickerService()
         self.uploadService = UploadService(provider:UploadProvider())
+        self.imageCacheService = ImageCacheService()
     }
 }
 
@@ -40,5 +43,6 @@ class StubService: ServiceType {
     var contactService: ContactServiceType = StubContactService()
     var photoPickerService: PhotoPickerServiceType = StubPhotoPickerService()
     var uploadService: UploadServiceType = StubUploadService()
+    var imageCacheService : ImageCacheServiceType = StubImageCacheService()
     
 }
