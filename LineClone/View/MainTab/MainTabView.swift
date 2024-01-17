@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @EnvironmentObject var container : DIContainer
+    @EnvironmentObject var navigationRouter: NavigationRouter
     @EnvironmentObject var authViewModel : AuthenticatedViewModel
     
     @State private var selectedTab : MainTabType = .home
@@ -20,7 +21,7 @@ struct MainTabView: View {
                 Group {
                     switch tab {
                     case .home:
-                        HomeView(viewModel: .init(container : container,userId : authViewModel.userId ?? ""))
+                        HomeView(viewModel: .init(container : container, navigationRouter: navigationRouter,userId : authViewModel.userId ?? ""))
                     case .chat:
                         ChatListView()
                     case .phone:
@@ -44,12 +45,13 @@ struct MainTabView: View {
 
 
 struct MainTabView_PreViews : PreviewProvider {
-    
+    static let navigationRouter : NavigationRouter = .init()
     static let container = DIContainer(services: StubService())
     static var previews: some View {
         MainTabView()
             .environmentObject(Self.container)
             .environmentObject(AuthenticatedViewModel(container: Self.container))
+            .environmentObject(Self.navigationRouter)
     }
 }
 
