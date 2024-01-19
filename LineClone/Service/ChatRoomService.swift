@@ -10,6 +10,8 @@ import Combine
 
 protocol ChatRoomServiceType {
     func createChatRoomIfNeeded(myUserId: String,otherUserId: String,otherUserName : String) -> AnyPublisher<ChatRoom,ServiceError>
+    func loadChatRooms(myUserId: String) -> AnyPublisher<[ChatRoom],ServiceError>
+    
 }
 
 class ChatRoomService : ChatRoomServiceType {
@@ -40,10 +42,18 @@ class ChatRoomService : ChatRoomServiceType {
             .eraseToAnyPublisher()
     }
     
+    func loadChatRooms(myUserId: String) -> AnyPublisher<[ChatRoom],ServiceError>{
+        Just([]).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
+    }
+    
 }
 
 class StubChatRoomService : ChatRoomServiceType {
     func createChatRoomIfNeeded(myUserId: String,otherUserId: String,otherUserName : String) -> AnyPublisher<ChatRoom,ServiceError>{
         Empty().eraseToAnyPublisher()
+    }
+    
+    func loadChatRooms(myUserId: String) -> AnyPublisher<[ChatRoom],ServiceError>{
+        Just([.stub1, .stub2]).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
     }
 }
