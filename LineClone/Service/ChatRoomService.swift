@@ -43,7 +43,11 @@ class ChatRoomService : ChatRoomServiceType {
     }
     
     func loadChatRooms(myUserId: String) -> AnyPublisher<[ChatRoom],ServiceError>{
-        Just([]).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
+        dbRepository.loadChatRooms(myUserId: myUserId)
+            .map{$0.map{$0.toModel()}}
+            .mapError{ ServiceError.error($0)}
+            .eraseToAnyPublisher()
+        
     }
     
 }
