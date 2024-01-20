@@ -41,9 +41,37 @@ struct ChatView: View {
     }
     
     var contentView : some View {
-        EmptyView()
+        ForEach(viewModel.chatDataList) {
+            chatData in
+            Section{
+                ForEach(chatData.chats) {
+                    chat in
+                    ChatItemView(message: chat.message ?? "",
+                                 direction: viewModel.getDirection(id: chat.userId),
+                                 date: chat.date)
+                }
+            } header: {
+                headerView(dateStr: chatData.dateStr)
+            }
+            
+        }
+    }
+    
+    func headerView(dateStr: String) -> some View {
+        ZStack{
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 76,height: 20)
+                .background(Color.chatotice)
+                .cornerRadius(50)
+            Text(dateStr)
+                .font(.system(size:10))
+                .foregroundColor(.bgh)
+        }
     }
 }
+
+
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {

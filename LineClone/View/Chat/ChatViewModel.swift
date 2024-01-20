@@ -30,6 +30,10 @@ class ChatViewModel : ObservableObject {
         self.chatRoomId = chatRoomId
         self.myUserId = myUserId
         self.otherUserId = otherUserId
+        
+        updateChatDateList(.init(chatId: "chat1_id", userId: "user1_id",message: "Hello", date: Date()))
+        updateChatDateList(.init(chatId: "chat2_id", userId: "user2_id",message: "Hello", date: Date()))
+        updateChatDateList(.init(chatId: "chat3_id", userId: "user1_id",message: "Hello", date: Date()))
     }
     
     
@@ -43,6 +47,10 @@ class ChatViewModel : ObservableObject {
             let newChatData : ChatData = .init(dateStr: key, chats: [chat])
                 chatDataList.append(newChatData)
         }
+    }
+    
+    func getDirection(id: String ) -> ChatItemDirection {
+        myUserId == id ? .right : .left
     }
     
     func send(action : Action) {
