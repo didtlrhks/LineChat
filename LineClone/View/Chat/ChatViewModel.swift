@@ -17,6 +17,7 @@ class ChatViewModel : ObservableObject {
     @Published var chatDataList : [ChatData] = []
     @Published var myUser : User?
     @Published var otherUser : User?
+    @Published var message : String = ""
     
     private let chatRoomId : String
     private let myUserId :String
@@ -31,9 +32,9 @@ class ChatViewModel : ObservableObject {
         self.myUserId = myUserId
         self.otherUserId = otherUserId
         
-        updateChatDateList(.init(chatId: "chat1_id", userId: "user1_id",message: "Hello", date: Date()))
-        updateChatDateList(.init(chatId: "chat2_id", userId: "user2_id",message: "Hello", date: Date()))
-        updateChatDateList(.init(chatId: "chat3_id", userId: "user1_id",message: "Hello", date: Date()))
+//        updateChatDateList(.init(chatId: "chat1_id", userId: "user1_id",message: "Hello", date: Date()))
+//        updateChatDateList(.init(chatId: "chat2_id", userId: "user2_id",message: "Hello", date: Date()))
+//        updateChatDateList(.init(chatId: "chat3_id", userId: "user1_id",message: "Hello", date: Date()))
     }
     
     

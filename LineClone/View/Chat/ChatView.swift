@@ -9,16 +9,20 @@ import SwiftUI
 
 struct ChatView: View {
     @StateObject var viewModel: ChatViewModel
-  //  @FocusState private var isFocused: Bool
+    @FocusState private var isFocused: Bool
     @EnvironmentObject var navigationRouter : NavigationRouter
     var body: some View {
         
             ScrollView {
+                if viewModel.chatDataList.isEmpty {
+                    Color.chatg
+                }
               contentView
             }
         .background(Color.chatg)
         .navigationBarBackButtonHidden()
         .toolbar(.hidden, for: .tabBar)
+        .toolbarBackground(Color.chatg, for: .navigationBar)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {
                 Button {
@@ -38,6 +42,42 @@ struct ChatView: View {
                 Image(decorative: "settings")
             }
         }
+        .keyboardToolbar(height : 50) {
+            HStack(spacing: 13){
+                Button {
+                    
+                } label: {
+                    Image("other_add")
+                }
+                Button {
+                    
+                } label: {
+                    Image("image_add")
+                }
+                Button {
+                    
+                } label: {
+                    Image("photo_camera")
+                }
+                TextField("", text: $viewModel.message)
+                    .font(.system(size:16))
+                    .foregroundColor(.bkext)
+                    .focused($isFocused)
+                    .padding(.vertical,6)
+                    .padding(.horizontal,13)
+                    .background(Color.greyool)
+                    .cornerRadius(20)
+                
+                Button {
+                    
+                }label :
+                {
+                    Image("send")
+                }
+            }
+            .padding(.horizontal,27)
+        }
+        
     }
     
     var contentView : some View {

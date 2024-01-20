@@ -39,6 +39,7 @@
 		8E15C78C2B5BA122001468C7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C78B2B5BA122001468C7 /* Date+Extension.swift */; };
 		8E15C78E2B5BA5FF001468C7 /* ChatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C78D2B5BA5FF001468C7 /* ChatItemView.swift */; };
 		8E15C7902B5BA616001468C7 /* ChatItemDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C78F2B5BA616001468C7 /* ChatItemDirection.swift */; };
+		8E15C7922B5BAE37001468C7 /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7912B5BAE37001468C7 /* KeyboardToolbar.swift */; };
 		8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4882B5154750039FBB7 /* DIContainer.swift */; };
 		8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48B2B5154AA0039FBB7 /* Services.swift */; };
 		8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */; };
@@ -134,6 +135,7 @@
 		8E15C78B2B5BA122001468C7 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		8E15C78D2B5BA5FF001468C7 /* ChatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemView.swift; sourceTree = "<group>"; };
 		8E15C78F2B5BA616001468C7 /* ChatItemDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemDirection.swift; sourceTree = "<group>"; };
+		8E15C7912B5BAE37001468C7 /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
 		8E4BB4882B5154750039FBB7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E4BB48B2B5154AA0039FBB7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				8E15C7852B5B99BA001468C7 /* ChatViewModel.swift */,
 				8E15C78D2B5BA5FF001468C7 /* ChatItemView.swift */,
 				8E15C78F2B5BA616001468C7 /* ChatItemDirection.swift */,
+				8E15C7912B5BAE37001468C7 /* KeyboardToolbar.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,
 				8E15C74F2B57AA80001468C7 /* URLImageView.swift in Sources */,
 				8E15C7522B57AAA4001468C7 /* URLImageViewModel.swift in Sources */,
+				8E15C7922B5BAE37001468C7 /* KeyboardToolbar.swift in Sources */,
 				8E15C7682B57DD6E001468C7 /* ChatView.swift in Sources */,
 				8E15C7462B579767001468C7 /* UploadSourceType.swift in Sources */,
 				8E15C76B2B57DDA0001468C7 /* SearchView.swift in Sources */,
