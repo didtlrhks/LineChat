@@ -28,6 +28,7 @@ class HomeViewModel : ObservableObject {
     
    
      var userId : String
+    
     private var container : DIContainer
     private var navigationRouter : NavigationRouter
     private var subscriptions = Set<AnyCancellable>()
@@ -98,8 +99,11 @@ class HomeViewModel : ObservableObject {
                 .sink {
                     completion in
                     
-                } receiveValue: { [weak self] chatRoom in
-                    self?.navigationRouter.push(to : .chat)
+                }receiveValue: { [weak self] chatRoom in
+                    guard let `self` = self else { return }
+                    self.navigationRouter.push(to: .chat(chatRoomId: chatRoom.chatRoomId,
+                                                                   myUserId: self.userId,
+                                                                   otherUserId: otherUser.id))
                 }.store(in: &subscriptions)
         }
         

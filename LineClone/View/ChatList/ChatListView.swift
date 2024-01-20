@@ -10,7 +10,7 @@ import SwiftUI
 struct ChatListView: View {
     @EnvironmentObject var navigationRouter : NavigationRouter
     @StateObject var viewModel : ChatListViewModel
-    
+    @EnvironmentObject var container: DIContainer
     
     var body: some View {
         NavigationStack(path: $navigationRouter.destinations){
@@ -44,7 +44,7 @@ fileprivate struct ChatRoomCell : View {
     let userId : String
     
     var body: some View {
-        NavigationLink(value: NavigationDestination.chat){
+        NavigationLink(value: NavigationDestination.chat(chatRoomId: chatRoom.chatRoomId, myUserId: userId, otherUserId: chatRoom.otherUserId)){
             HStack(spacing : 8){
                 Image("person")
                     .resizable()
