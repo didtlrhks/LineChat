@@ -18,7 +18,7 @@ struct Chat : Hashable,Identifiable {
 }
 
 extension Chat{
-    func toObject() -> ChatObject{
+    func toObject() -> ChatObject {
         .init(chatId: chatId, 
               userId: userId,
               message: message,
