@@ -33,13 +33,22 @@ class ChatViewModel : ObservableObject {
         self.myUserId = myUserId
         self.otherUserId = otherUserId
         
+        bind()
+        
 //        updateChatDateList(.init(chatId: "chat1_id", userId: "user1_id",message: "Hello", date: Date()))
 //        updateChatDateList(.init(chatId: "chat2_id", userId: "user2_id",message: "Hello", date: Date()))
 //        updateChatDateList(.init(chatId: "chat3_id", userId: "user1_id",message: "Hello", date: Date()))
     }
     
+    func bind() {
+        container.services.chatService.observeChat(chatRoomId: chatRoomId)
+            .sink { [weak self] chat in
+                guard let chat else {return }
+                self?.updateChatDataList(chat)
+            }.store(in: &subscriptions)
+    }
     
-    func updateChatDateList(_ chat : Chat) {
+    func updateChatDataList(_ chat : Chat) {
         let key = chat.date.toChatDataKey
         
         if let index = chatDataList.firstIndex(where: {$0.dateStr == key}){
