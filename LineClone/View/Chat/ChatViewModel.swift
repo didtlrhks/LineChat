@@ -94,7 +94,26 @@ class ChatViewModel : ObservableObject {
                 }.store(in: &subscriptions)
         case let .uploadImage(pickerItem):
             
-            return 
+            
+            guard let pickerItem else {return }
+            
+            container.services.photoPickerService.loadTransferable(from: pickerItem)
+                .flatMap{ data in
+                    self.container.services.uploadService.uploadImage(source: .chat(chatRoomId: self.chatRoomId), data: data)
+                    
+                }
+                .flatMap{
+                    url in
+                    let chat : Chat = .init(chatId: UUID().uuidString, userId: self.myUserId,photoURL: url.absoluteString, date: Date())
+                    return self.container.services.chatService.addChat(chat, to: self.chatRoomId)
+                }
+                .sink {
+                    completion in
+                    
+                }receiveValue : {
+                    _ in
+                }.store(in: &subscriptions)
+            return
        
         }
     }
