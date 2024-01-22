@@ -5,20 +5,27 @@
 //  Created by 양시관 on 1/20/24.
 //
 
-import Foundation
-import Combine
 
+import Combine
+import PhotosUI
+import SwiftUI
 
 class ChatViewModel : ObservableObject {
     enum Action {
         case load
         case addChat(String)
+        case uploadImage(PhotosPickerItem?)
     }
     
     @Published var chatDataList : [ChatData] = []
     @Published var myUser : User?
     @Published var otherUser : User?
     @Published var message : String = ""
+    @Published var imageSelection: PhotosPickerItem? {
+        didSet{
+            send(action: .uploadImage(imageSelection))
+        }
+    }
     
     private let chatRoomId : String
     private let myUserId :String
@@ -34,10 +41,6 @@ class ChatViewModel : ObservableObject {
         self.otherUserId = otherUserId
         
         bind()
-        
-//        updateChatDateList(.init(chatId: "chat1_id", userId: "user1_id",message: "Hello", date: Date()))
-//        updateChatDateList(.init(chatId: "chat2_id", userId: "user2_id",message: "Hello", date: Date()))
-//        updateChatDateList(.init(chatId: "chat3_id", userId: "user1_id",message: "Hello", date: Date()))
     }
     
     func bind() {
@@ -89,6 +92,10 @@ class ChatViewModel : ObservableObject {
                     
                     self?.message = ""
                 }.store(in: &subscriptions)
+        case let .uploadImage(pickerItem):
+            
+            return 
+       
         }
     }
     
