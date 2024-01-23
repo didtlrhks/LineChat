@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-enum DBError : Error {
+enum DBError: Error {
     case error(Error)
     case emptyValue
     case invalidatedType

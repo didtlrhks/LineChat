@@ -7,11 +7,9 @@
 
 import Foundation
 
-
 enum Phase {
-    case notRequest
+    case notRequested
     case loading
     case success
     case fail
-    
 }

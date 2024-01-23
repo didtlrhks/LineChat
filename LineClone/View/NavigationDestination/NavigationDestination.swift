@@ -8,8 +8,9 @@
 import Foundation
 
 
+import Foundation
+
 enum NavigationDestination: Hashable {
-    case chat(chatRoomId : String, myUserId : String, otherUserId : String)
-    case search
-    
+    case chat(chatRoomId: String, myUserId: String, otherUserId: String)
+    case search(userId: String)
 }

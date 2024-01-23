@@ -7,11 +7,10 @@
 
 import Foundation
 
-
 typealias DBKey = Constant.DBKey
+typealias AppStorageType = Constant.AppStorage
 
-
-enum Constant {}
+enum Constant { }
 
 extension Constant {
     struct DBKey {
@@ -21,3 +20,8 @@ extension Constant {
     }
 }
 
+extension Constant {
+    struct AppStorage {
+        static let Appearance = "AppStorage_Appearance"
+    }
+}

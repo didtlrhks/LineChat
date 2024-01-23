@@ -9,6 +9,8 @@ import Foundation
 import Combine
 import FirebaseDatabase
 
+import Foundation
+import Combine
 
 protocol ChatRoomDBRepositoryType {
     func getChatRoom(myUserId: String, otherUserId: String) -> AnyPublisher<ChatRoomObject?, DBError>
@@ -46,7 +48,7 @@ class ChatRoomDBRepository: ChatRoomDBRepositoryType {
             .compactMap { try? JSONEncoder().encode($0) }
             .compactMap { try? JSONSerialization.jsonObject(with: $0, options: .fragmentsAllowed) }
             .flatMap { value in
-                self.reference.setValue(key: DBKey.ChatRooms, path: "\(myUserId)/\(object.otherUserId)", value: value)
+                self.reference.setValue(key: DBKey.ChatRooms, path: "\(myUserId)/\(object.otherUseId)", value: value)
             }
             .eraseToAnyPublisher()
     }

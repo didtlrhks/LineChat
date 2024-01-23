@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 
+import SwiftUI
+
 struct ChatImageItemView: View {
     let urlString: String
     let direction: ChatItemDirection
@@ -38,7 +40,7 @@ struct ChatImageItemView: View {
         Text(date.toChatTime)
             .font(.system(size: 10))
             .foregroundColor(.greyDeep)
-           // .accessibilityLabel(Text(date.toChatTimeAccessibility))
+            .accessibilityLabel(Text(date.toChatTimeAccessibility))
     }
 }
 

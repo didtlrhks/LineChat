@@ -80,8 +80,8 @@ struct OtherProfileView: View {
 
 struct OtherProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        OtherProfileView(viewModel : .init(container: DIContainer(services: StubService()), userId: "user2_id")) {
-            _ in
+        OtherProfileView(viewModel: .init(container: .stub, userId: "user2_id")) { _ in
+            
         }
     }
 }

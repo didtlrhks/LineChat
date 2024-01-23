@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct PlaceholderView: View {
     var body: some View {
-        Color.bgh
+        Color.bgWh
     }
 }
 
-#Preview {
-    PlaceholderView()
+struct PlaceholderView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlaceholderView()
+    }
 }

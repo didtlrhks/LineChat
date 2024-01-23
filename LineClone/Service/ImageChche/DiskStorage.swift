@@ -11,10 +11,13 @@ import SwiftUI
 import CryptoKit
 
 
+import UIKit
+
 protocol DiskStorageType {
     func value(for key: String) throws -> UIImage?
     func store(for key: String, image: UIImage) throws
 }
+
 
 class DiskStorage: DiskStorageType {
     
@@ -37,16 +40,12 @@ class DiskStorage: DiskStorageType {
             print(error)
         }
     }
-    func sha256(_ input: String) -> String {
-        let inputData = Data(input.utf8)
-        let hashedData = SHA256.hash(data: inputData)
-        return hashedData.compactMap { String(format: "%02x", $0) }.joined()
-    }
     
     func cacheFileURL(for key: String) -> URL {
-        let fileName = sha256(key)
+        let fileName = key.sha256() // String 확장을 사용하여 SHA256 해시 계산
         return directoryURL.appendingPathComponent(fileName, isDirectory: false)
     }
+
     
     func value(for key: String) throws -> UIImage? {
         let fileURL = cacheFileURL(for: key)
@@ -65,3 +64,13 @@ class DiskStorage: DiskStorageType {
         try data?.write(to: fileURL)
     }
 }
+
+
+extension String {
+    func sha256() -> String {
+        let data = Data(self.utf8)
+        let hash = SHA256.hash(data: data)
+        return hash.map { String(format: "%02x", $0) }.joined()
+    }
+}
+

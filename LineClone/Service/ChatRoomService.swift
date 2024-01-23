@@ -8,6 +8,9 @@
 import Foundation
 import Combine
 
+import Foundation
+import Combine
+
 protocol ChatRoomServiceType {
     func createChatRoomIfNeeded(myUserId: String, otherUserId: String, otherUserName: String) -> AnyPublisher<ChatRoom, ServiceError>
     func loadChatRooms(myUserId: String) -> AnyPublisher<[ChatRoom], ServiceError>
@@ -29,7 +32,7 @@ class ChatRoomService: ChatRoomServiceType {
                 if let object {
                     return Just(object.toModel()).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
                 } else {
-                    let newChatRoom: ChatRoom = .init(chatRoomId: UUID().uuidString, otherUserName: otherUserName, otherUserId: otherUserId)
+                    let newChatRoom: ChatRoom = .init(chatRoomId: UUID().uuidString, otherUserName: otherUserName, otherUseId: otherUserId)
                     return self.addChatRoom(newChatRoom, to: myUserId)
                 }
             }

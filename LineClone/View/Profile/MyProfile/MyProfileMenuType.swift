@@ -8,13 +8,15 @@
 import Foundation
 
 
-enum MyProfileMenuType : Hashable,CaseIterable {
+import Foundation
+
+enum MyProfileMenuType: Hashable, CaseIterable {
     case studio
     case decorate
     case keep
     case story
     
-    var descroption : String {
+    var description: String {
         switch self {
         case .studio:
             return "스튜디오"
@@ -27,7 +29,7 @@ enum MyProfileMenuType : Hashable,CaseIterable {
         }
     }
     
-    var imageName : String{
+    var imageName: String {
         switch self {
         case .studio:
             return "mood"
@@ -40,3 +42,4 @@ enum MyProfileMenuType : Hashable,CaseIterable {
         }
     }
 }
+

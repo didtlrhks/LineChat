@@ -9,8 +9,6 @@ import Foundation
 import Combine
 import UIKit
 
-
-
 protocol ImageCacheServiceType {
     func image(for key: String) -> AnyPublisher<UIImage?, Never>
 }
@@ -88,8 +86,6 @@ class ImageCacheService: ImageCacheServiceType {
             try? diskStorage.store(for: key, image: image)
         }
     }
-    
-    // 저장하는 함수
 }
 
 class StubImageCacheService: ImageCacheServiceType {

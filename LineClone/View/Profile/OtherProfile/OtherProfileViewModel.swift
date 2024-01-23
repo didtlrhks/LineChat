@@ -23,7 +23,7 @@ class OtherProfileViewModel: ObservableObject {
     }
     
     func getUser() async {
-        if let user = try? await container.services.userServices.getUser(userId: userId) {
+        if let user = try? await container.services.userService.getUser(userId: userId) {
             userInfo = user
         }
     }

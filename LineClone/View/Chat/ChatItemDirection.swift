@@ -7,6 +7,8 @@
 import Swift
 import SwiftUI
 
+import SwiftUI
+
 enum ChatItemDirection {
     case left
     case right

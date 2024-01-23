@@ -8,16 +8,18 @@
 import SwiftUI
 
 @main
-struct LineCloneApp: App {
+struct LMessengerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var container : DIContainer = .init(services: Services())
- 
+    @AppStorage(AppStorageType.Appearance) var appearanceValue: Int = UserDefaults.standard.integer(forKey: AppStorageType.Appearance)
+    @StateObject var container: DIContainer = .init(services: Services())
     
     var body: some Scene {
         WindowGroup {
-            AuthenticatedView(authViewModel: .init(container: container),
-                              navigationRouter: .init())
+            AuthenticatedView(authViewModel: .init(container: container))
                 .environmentObject(container)
+                .onAppear {
+                    container.appearanceController.changeAppearance(AppearanceType(rawValue: appearanceValue))
+                }
         }
     }
 }

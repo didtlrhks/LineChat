@@ -11,12 +11,13 @@ struct MyProfileDescEditView: View {
     @Environment(\.dismiss) var dismiss
     @State var description: String
     
-    var onCompleted : (String) -> Void
+    var onCompleted: (String) -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        NavigationStack{
-            VStack{
-                TextField("상태메시지를 입력해주세요",text : $description)
+        NavigationStack {
+            VStack {
+                TextField("상태메시지를 입력해주세요", text: $description)
+                    .multilineTextAlignment(.center)
             }
             .toolbar {
                 Button("완료") {
@@ -29,9 +30,10 @@ struct MyProfileDescEditView: View {
     }
 }
 
-
-#Preview {
-    MyProfileDescEditView(description: "") {
-        _ in
+struct MyProfileDescEditView_Previews: PreviewProvider {
+    static var previews: some View {
+        MyProfileDescEditView(description: "") { _ in
+            
+        }
     }
 }

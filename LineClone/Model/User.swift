@@ -8,32 +8,35 @@
 import Foundation
 
 
-struct User {
-    var id : String
-    var name : String
-    var phoneNumber : String?
-    var profileURL : String?
-    var description : String?
+import Foundation
+
+struct User: Identifiable {
+    var id: String
+    var name: String
+    var phoneNumber: String?
+    var profileURL: String?
+    var description: String?
+    var fcmToken: String?
 }
 
 extension User {
     func toObject() -> UserObject {
-        .init(
-            id : id,
-            name :name,
-            phoneNumber : phoneNumber,
-            profileURL :profileURL,
-            description : description
-        
+        .init(id: id,
+              name: name,
+              phoneNumber: phoneNumber,
+              profileURL: profileURL,
+              description: description,
+              fcmToken: fcmToken
         )
     }
 }
 
 extension User {
-    static var stub1 : User {
-        .init(id : "user_id1", name: "김진영")
+    static var stub1: User {
+        .init(id: "user1_id", name: "김하늘")
     }
-    static var stub2 : User {
-        .init(id : "user_id2", name: "양시관")
+    
+    static var stub2: User {
+        .init(id: "user2_id", name: "김코랄")
     }
 }

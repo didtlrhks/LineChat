@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct KeyboardToolbar<ToolbarView: View>: ViewModifier {
     private let height: CGFloat
     private let toolbarView: ToolbarView

@@ -8,35 +8,28 @@
 import Foundation
 import Combine
 
-
-class HomeViewModel : ObservableObject {
-    
+class HomeViewModel: ObservableObject {
     
     enum Action {
         case load
         case requestContacts
-        case presentMyProfileView
-        case presentOtherProfileView(String)
+        case presentView(HomeModalDestination)
         case goToChat(User)
-       
-        
     }
-    @Published var myUser : User?
+
+    @Published var phase: Phase = .notRequested
+    @Published var myUser: User?
     @Published var users: [User] = []
-    @Published var phase : Phase = .notRequest
-    @Published var modalDestination : HomeModalDestination?
+    @Published var modalDestination: HomeModalDestination?
     
-   
-     var userId : String
+    var userId: String
     
-    private var container : DIContainer
-    private var navigationRouter : NavigationRouter
+    private var container: DIContainer
     private var subscriptions = Set<AnyCancellable>()
     
-    init(container : DIContainer, navigationRouter : NavigationRouter, userId : String){
+    init(container: DIContainer, userId: String) {
         self.container = container
         self.userId = userId
-        self.navigationRouter = navigationRouter
     }
     
     func send(action: Action) {
@@ -44,72 +37,51 @@ class HomeViewModel : ObservableObject {
         case .load:
             phase = .loading
             
-            container.services.userServices.getUser(userId: userId)
-                .handleEvents(receiveOutput :
-                                { [weak self] user in
+            container.services.userService.getUser(userId: userId)
+                .handleEvents(receiveOutput: { [weak self] user in
                     self?.myUser = user
                 })
-                .flatMap{
-                    user in
-                    self.container.services.userServices.loadUser(id: user.id)
-                }
-                .sink { [weak self]completion in
-                    if case .failure = completion {
-                        self?.phase = .fail
-                        
-                    }
-                } receiveValue: { [weak self] users in
-                    self?.phase = .success
-                    self?.users = users
-                }.store(in: &subscriptions)
- 
-            
-        case .requestContacts:
-            container.services.contactService.fetchContacts()
-                .flatMap {
-                    users in
-                    self.container.services.userServices.addUserAfterContact(users: users)
-                }
-                .flatMap { _ in
-                    self.container.services.userServices.loadUser(id: self.userId)
+                .flatMap { user in
+                    self.container.services.userService.loadUsers(id: user.id)
                 }
                 .sink { [weak self] completion in
                     if case .failure = completion {
                         self?.phase = .fail
                     }
-                }receiveValue: { [weak self] users in
+                } receiveValue: { [weak self] users in
                     self?.phase = .success
                     self?.users = users
                 }.store(in: &subscriptions)
             
+        case .requestContacts:
+            container.services.contactService.fetchContacts()
+                .flatMap { users in
+                    self.container.services.userService.addUserAfterContact(users: users)
+                }
+                .flatMap { _ in
+                    self.container.services.userService.loadUsers(id: self.userId)
+                }
+                .receive(on: DispatchQueue.main)
+                .sink { completion in
+                } receiveValue: { [weak self] users in
+                    self?.phase = .success
+                    self?.users = users
+                }.store(in: &subscriptions)
             
+        case let .presentView(destination):
+            modalDestination = destination
             
-            
-        case .presentMyProfileView:
-            modalDestination = .myProfile
-            
-            
-            
-        case let .presentOtherProfileView(userId):
-            modalDestination = .otherProfile(userId)
-            
-        case let .goToChat(otherUser) :
-            
+        case let .goToChat(otherUser):
             container.services.chatRoomService.createChatRoomIfNeeded(myUserId: userId, otherUserId: otherUser.id, otherUserName: otherUser.name)
-                .sink {
-                    completion in
+                .sink { completion in
                     
-                }receiveValue: { [weak self] chatRoom in
+                } receiveValue: { [weak self] chatRoom in
                     guard let `self` = self else { return }
-                    self.navigationRouter.push(to: .chat(chatRoomId: chatRoom.chatRoomId,
+                    self.container.navigationRouter.push(to: .chat(chatRoomId: chatRoom.chatRoomId,
                                                                    myUserId: self.userId,
                                                                    otherUserId: otherUser.id))
                 }.store(in: &subscriptions)
+
         }
-        
-        
- 
-    
     }
 }
-

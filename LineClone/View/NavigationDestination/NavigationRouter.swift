@@ -6,10 +6,25 @@
 //
 
 import Foundation
+import Combine
 
-class NavigationRouter : ObservableObject {
+protocol NavigationRoutable {
+    var destinations: [NavigationDestination] { get set }
     
-    @Published var destinations : [NavigationDestination] = []
+    func push(to view: NavigationDestination)
+    func pop()
+    func popToRootView()
+}
+
+class NavigationRouter: NavigationRoutable, ObservableObjectSettable {
+    
+    var objectWillChange: ObservableObjectPublisher?
+    
+    var destinations: [NavigationDestination] = [] {
+        didSet {
+            objectWillChange?.send()
+        }
+    }
     
     func push(to view: NavigationDestination) {
         destinations.append(view)
@@ -19,8 +34,7 @@ class NavigationRouter : ObservableObject {
         _ = destinations.popLast()
     }
     
-    func popToRootView(){
+    func popToRootView() {
         destinations = []
     }
-    
 }

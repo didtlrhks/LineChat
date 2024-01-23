@@ -9,6 +9,8 @@ import Foundation
 
 
 
+import Foundation
+
 enum OtherProfileMenuType: Hashable, CaseIterable {
     case chat
     case phoneCall

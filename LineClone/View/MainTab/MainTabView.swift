@@ -7,56 +7,46 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct MainTabView: View {
-    @EnvironmentObject var container : DIContainer
-    @EnvironmentObject var navigationRouter: NavigationRouter
-    @EnvironmentObject var authViewModel : AuthenticatedViewModel
-    
-    @State private var selectedTab : MainTabType = .home
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @EnvironmentObject var container: DIContainer
+    @State private var selectedTab: MainTabType = .home
     
     var body: some View {
-        TabView(selection : $selectedTab ){
-            ForEach(MainTabType.allCases,id : \.self) {
-                tab in
+        TabView(selection: $selectedTab) {
+            ForEach(MainTabType.allCases, id: \.self) { tab in
                 Group {
                     switch tab {
                     case .home:
-                        HomeView(viewModel: .init(container : container, navigationRouter: navigationRouter,userId : authViewModel.userId ?? ""))
+                        HomeView(viewModel: .init(container: container, userId: authViewModel.userId ?? ""))
                     case .chat:
                         ChatListView(viewModel: .init(container: container, userId: authViewModel.userId ?? ""))
                     case .phone:
-                        Color.blackix
+                        Color.blackFix
                     }
                 }
                 .tabItem {
-                    Label(tab.title, image : tab.imageName(selected: selectedTab == tab))
+                    Label(tab.title, image: tab.imageName(selected: selectedTab == tab))
                 }
                 .tag(tab)
             }
         }
         .tint(.bkText)
-        }
-    init()
-    {
+    }
+    
+    init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor(Color.bkText)
     }
 }
 
-
-
-struct MainTabView_PreViews : PreviewProvider {
-    static let navigationRouter : NavigationRouter = .init()
-    static let container = DIContainer(services: StubService())
+struct MainTabView_Previews: PreviewProvider {
+    static let container: DIContainer = .stub
+    
     static var previews: some View {
         MainTabView()
             .environmentObject(Self.container)
-            .environmentObject(AuthenticatedViewModel(container: Self.container))
-            .environmentObject(Self.navigationRouter)
+            .environmentObject(AuthenticationViewModel(container: Self.container))
     }
 }
-
-//#Preview {
-//    let container = DIContainer(services: StubService())
-//    MainTabView()
-//        .environmentObject(self.container)
-//}

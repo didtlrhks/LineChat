@@ -6,32 +6,24 @@
 //
 
 import Foundation
-import SwiftUI
 
-
-
-enum MainTabType : String,CaseIterable {
+enum MainTabType: String, CaseIterable {
     case home
     case chat
     case phone
     
-    
-    
-    var title : String {
+    var title: String {
         switch self {
         case .home:
             return "홈"
-        case .chat :
+        case .chat:
             return "대화"
-        case .phone :
+        case .phone:
             return "통화"
-            
         }
-        
     }
-    func imageName(selected : Bool) -> String {
+    
+    func imageName(selected: Bool) -> String {
         selected ? "\(rawValue)_fill" : rawValue
     }
 }
-
-

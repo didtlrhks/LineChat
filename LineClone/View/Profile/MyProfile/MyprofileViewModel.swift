@@ -6,51 +6,53 @@
 //
 
 import Foundation
-import PhotosUI
 import SwiftUI
+import PhotosUI
 
-class MyprofileViewModel : ObservableObject {
-    @Published var userInfo : User?
-    @Published var isPresentedDescEditView : Bool = false
-    @Published var imageSelection : PhotosPickerItem?{
-        
-        didSet{
-            Task{
+@MainActor
+class MyProfileViewModel: ObservableObject {
+    
+    @Published var userInfo: User?
+    @Published var isPresentedDescEditView: Bool = false
+    @Published var imageSelection: PhotosPickerItem? {
+        didSet {
+            Task {
                 await updateProfileImage(pickerItem: imageSelection)
             }
         }
     }
     
-    private var container : DIContainer
-    private let userId : String
+    private let userId: String
+    private let container: DIContainer
     
-    
-    init(container: DIContainer,userId : String) {
+    init(container: DIContainer, userId: String) {
         self.container = container
-        self.userId =  userId
+        self.userId = userId
     }
     
     func getUser() async {
-        if let user = try? await container.services.userServices.getUser(userId: userId) {
+        if let user = try? await container.services.userService.getUser(userId: userId) {
             userInfo = user
-            
         }
     }
+    
     func updateDescription(_ description: String) async {
-        do{
-            try await container.services.userServices.updateDescription(userId: userId, description: description)
+        do {
+            try await container.services.userService.updateDescription(userId: userId, description: description)
             userInfo?.description = description
         } catch {
-            
+            print(error.localizedDescription)
         }
     }
-    func updateProfileImage(pickerItem:PhotosPickerItem?) async {
-        guard let pickerItem else {return}
-        do{
-            
+    
+    func updateProfileImage(pickerItem: PhotosPickerItem?) async {
+        guard let pickerItem else { return }
+        
+        do {
             let data = try await container.services.photoPickerService.loadTransferable(from: pickerItem)
             let url = try await container.services.uploadService.uploadImage(source: .profile(userId: userId), data: data)
-          try await container.services.userServices.updateProfileURL(userId: userId, urlString: url.absoluteString)
+            try await container.services.userService.updateProfileURL(userId: userId, urlString: url.absoluteString)
+            
             userInfo?.profileURL = url.absoluteString
         } catch {
             print(error.localizedDescription)

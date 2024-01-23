@@ -13,13 +13,13 @@ struct SearchButton: View {
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(height: 36)
-                .background(Color.greyool)
+                .background(Color.greyCool)
                 .cornerRadius(5)
             
             HStack{
                 Text("검색")
                     .font(.system(size: 12))
-                    .foregroundColor(.greyightVer2)
+                    .foregroundColor(.greyLightVer2)
                 Spacer()
             }
             .padding(.leading,22)
