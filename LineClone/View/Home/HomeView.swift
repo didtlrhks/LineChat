@@ -22,8 +22,8 @@ struct HomeView: View {
                         OtherProfileView(viewModel: .init(container: container, userId: userId)) { otherUserInfo in
                             viewModel.send(action: .goToChat(otherUserInfo))
                         }
-                    case .setting:
-                        SettingView(viewModel: .init())
+//                    case .setting:
+//                        SettingView(viewModel: .init())
                     }
                 }
                 .navigationDestination(for: NavigationDestination.self) {
@@ -45,13 +45,34 @@ struct HomeView: View {
         case .success:
             loadedView
                 .toolbar {
-                    Image(decorative: "bookmark")
-                    Image(decorative: "notifications")
-                    Image(decorative: "person_add")
-                    Button {
-                        viewModel.send(action: .presentView(.setting))
-                    } label: {
-                        Image("settings", label: Text("설정"))
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        // decorative 이미지는 단순 장식용으로, 인터랙션이 필요없는 경우 사용합니다.
+                        // 인터랙션이 필요한 경우 Button으로 감싸줘야 합니다.
+                        // 여기서는 예시를 위해 Button을 추가하지 않았으나, 실제 앱에서는 인터랙션이 필요한 경우 Button을 사용해야 합니다.
+                        
+                        Button(action: {
+                            // bookmark 액션
+                        }) {
+                            Image(systemName: "bookmark")
+                        }
+                        
+                        Button(action: {
+                            // notifications 액션
+                        }) {
+                            Image(systemName: "bell")
+                        }
+                        
+                        Button(action: {
+                            // person_add 액션
+                        }) {
+                            Image(systemName: "person.badge.plus")
+                        }
+                        
+                        Button {
+                        //    viewModel.send(action: .presentView(.setting))
+                        } label: {
+                            Image(systemName: "gear")
+                        }
                     }
                 }
         case .fail:

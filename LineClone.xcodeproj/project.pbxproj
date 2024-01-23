@@ -60,6 +60,7 @@
 		8E15C7C72B6023BE001468C7 /* AppearanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7C62B6023BE001468C7 /* AppearanceType.swift */; };
 		8E15C7C92B6023D5001468C7 /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7C82B6023D5001468C7 /* AppearanceController.swift */; };
 		8E15C7CB2B6027E8001468C7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8E15C7CA2B6027E8001468C7 /* FirebaseMessaging */; };
+		8E15C7CF2B6032FC001468C7 /* Search.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7CD2B6032FC001468C7 /* Search.xcdatamodeld */; };
 		8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4882B5154750039FBB7 /* DIContainer.swift */; };
 		8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48B2B5154AA0039FBB7 /* Services.swift */; };
 		8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */; };
@@ -175,6 +176,7 @@
 		8E15C7C42B602361001468C7 /* ObservableObjectSettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectSettable.swift; sourceTree = "<group>"; };
 		8E15C7C62B6023BE001468C7 /* AppearanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceType.swift; sourceTree = "<group>"; };
 		8E15C7C82B6023D5001468C7 /* AppearanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
+		8E15C7CE2B6032FC001468C7 /* Search.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Search.xcdatamodel; sourceTree = "<group>"; };
 		8E4BB4882B5154750039FBB7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E4BB48B2B5154AA0039FBB7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -350,6 +352,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		8E15C7CC2B6032E1001468C7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8E15C7CD2B6032FC001468C7 /* Search.xcdatamodeld */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8E4BB4872B51545B0039FBB7 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +522,7 @@
 		8EDA8CF52B51165500705C9F /* LineClone */ = {
 			isa = PBXGroup;
 			children = (
+				8E15C7CC2B6032E1001468C7 /* Resource */,
 				8E15C73F2B57958F001468C7 /* Provider */,
 				8E6BBDC52B53CE7600317EDA /* Repository */,
 				8E4BB4AD2B525E150039FBB7 /* Model */,
@@ -738,6 +749,7 @@
 				8E15C7B72B601DEA001468C7 /* PushNotificationService.swift in Sources */,
 				8E15C7BF2B602180001468C7 /* SearchDataController.swift in Sources */,
 				8E15C7A52B600C3A001468C7 /* SettingViewModel.swift in Sources */,
+				8E15C7CF2B6032FC001468C7 /* Search.xcdatamodeld in Sources */,
 				8EDA8D212B51487700705C9F /* Color+Extension.swift in Sources */,
 				8ED0B9582B551E6500DDA888 /* ContactService.swift in Sources */,
 				8ED0B94F2B55144100DDA888 /* ErrorView.swift in Sources */,
@@ -1190,6 +1202,19 @@
 			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		8E15C7CD2B6032FC001468C7 /* Search.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E15C7CE2B6032FC001468C7 /* Search.xcdatamodel */,
+			);
+			currentVersion = 8E15C7CE2B6032FC001468C7 /* Search.xcdatamodel */;
+			path = Search.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8EDA8CEB2B51165500705C9F /* Project object */;
 }
