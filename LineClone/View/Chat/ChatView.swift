@@ -90,22 +90,21 @@ struct ChatView: View {
         }
         
     }
-    
-    var contentView : some View {
-        ForEach(viewModel.chatDataList) {
-            chatData in
-            Section{
+    var contentView: some View {
+        ForEach(viewModel.chatDataList) { chatData in
+            Section {
                 ForEach(chatData.chats) {
                     chat in
-                    
-                    ChatItemView(message: chat.message ?? "",
-                                 direction: viewModel.getDirection(id: chat.userId),
-                                 date: chat.date)
+                    if let message = chat.message {
+                        
+                        ChatItemView(message: message, direction: viewModel.getDirection(id: chat.userId), date: chat.date)
+                    } else if let photoURL = chat.photoURL {
+                        ChatImageItemView(urlString: photoURL, direction: viewModel.getDirection(id: chat.userId))
+                    }
                 }
             } header: {
                 headerView(dateStr: chatData.dateStr)
             }
-            
         }
     }
     
