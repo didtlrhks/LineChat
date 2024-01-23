@@ -44,6 +44,7 @@
 		8E15C79B2B5D491B001468C7 /* ChatObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C79A2B5D491B001468C7 /* ChatObject.swift */; };
 		8E15C79D2B5D4A60001468C7 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C79C2B5D4A60001468C7 /* ChatService.swift */; };
 		8E15C79F2B5D5C4D001468C7 /* DBReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C79E2B5D5C4D001468C7 /* DBReference.swift */; };
+		8E15C7A12B5FA265001468C7 /* ChatImageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15C7A02B5FA265001468C7 /* ChatImageItemView.swift */; };
 		8E4BB4892B5154750039FBB7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB4882B5154750039FBB7 /* DIContainer.swift */; };
 		8E4BB48C2B5154AA0039FBB7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48B2B5154AA0039FBB7 /* Services.swift */; };
 		8E4BB48F2B5155940039FBB7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */; };
@@ -144,6 +145,7 @@
 		8E15C79A2B5D491B001468C7 /* ChatObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatObject.swift; sourceTree = "<group>"; };
 		8E15C79C2B5D4A60001468C7 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		8E15C79E2B5D5C4D001468C7 /* DBReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBReference.swift; sourceTree = "<group>"; };
+		8E15C7A02B5FA265001468C7 /* ChatImageItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatImageItemView.swift; sourceTree = "<group>"; };
 		8E4BB4882B5154750039FBB7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E4BB48B2B5154AA0039FBB7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8E4BB48E2B5155940039FBB7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				8E15C78D2B5BA5FF001468C7 /* ChatItemView.swift */,
 				8E15C78F2B5BA616001468C7 /* ChatItemDirection.swift */,
 				8E15C7912B5BAE37001468C7 /* KeyboardToolbar.swift */,
+				8E15C7A02B5FA265001468C7 /* ChatImageItemView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				8E6BBDC92B53CF0E00317EDA /* UserService.swift in Sources */,
 				8E15C7992B5D46E3001468C7 /* ChatDBRepository.swift in Sources */,
 				8E15C75C2B57C26C001468C7 /* ChatRoomObject.swift in Sources */,
+				8E15C7A12B5FA265001468C7 /* ChatImageItemView.swift in Sources */,
 				8E15C7372B567063001468C7 /* PhotoPickerService.swift in Sources */,
 				8ED0B94B2B55133900DDA888 /* PlaceholderView.swift in Sources */,
 				8E6BBDC72B53CE8B00317EDA /* UserDBRepository.swift in Sources */,

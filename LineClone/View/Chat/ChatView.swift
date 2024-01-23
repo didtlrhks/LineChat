@@ -97,6 +97,7 @@ struct ChatView: View {
             Section{
                 ForEach(chatData.chats) {
                     chat in
+                    
                     ChatItemView(message: chat.message ?? "",
                                  direction: viewModel.getDirection(id: chat.userId),
                                  date: chat.date)
