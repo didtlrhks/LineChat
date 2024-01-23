@@ -51,15 +51,15 @@ class ChatViewModel : ObservableObject {
             }.store(in: &subscriptions)
     }
     
-    func updateChatDataList(_ chat : Chat) {
+    
+    func updateChatDataList(_ chat: Chat) {
         let key = chat.date.toChatDataKey
         
-        if let index = chatDataList.firstIndex(where: {$0.dateStr == key}){
+        if let index = chatDataList.firstIndex(where: { $0.dateStr == key }) {
             chatDataList[index].chats.append(chat)
-        }else {
-            
-            let newChatData : ChatData = .init(dateStr: key, chats: [chat])
-                chatDataList.append(newChatData)
+        } else {
+            let newChatData: ChatData = .init(dateStr: key, chats: [chat])
+            chatDataList.append(newChatData)
         }
     }
     
@@ -124,7 +124,7 @@ class ChatViewModel : ObservableObject {
                 }receiveValue : {
                     _ in
                 }.store(in: &subscriptions)
-            return
+           // return
        
         }
     }

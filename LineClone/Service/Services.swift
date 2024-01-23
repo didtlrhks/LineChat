@@ -37,7 +37,7 @@ class Services : ServiceType {
         self.photoPickerService = PhotoPickerService()
         self.uploadService = UploadService(provider:UploadProvider())
         self.imageCacheService = ImageCacheService(memoryStorage: MemoryStorage(), diskStorage: DiskStorage())
-        self.chatRoomService = ChatRoomService(dbRepository: ChatRoomDBRepository())
+        self.chatRoomService = ChatRoomService(dbRepository: ChatRoomDBRepository(reference: DBReference()))
         self.chatService = ChatService(dbRepository: ChatDBRepository(reference: DBReference()))
     }
 }
