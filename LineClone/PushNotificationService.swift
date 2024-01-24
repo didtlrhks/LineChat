@@ -27,7 +27,7 @@ class PushNotificationService: NSObject, PushNotificationServiceType {
         _fcmToken.eraseToAnyPublisher()
     }
     
-    private let _fcmToken = CurrentValueSubject<String?, Never>(nil)
+    private let _fcmToken = CurrentValueSubject<String?, Never>(nil) // 권한을 확인을 하고 받아오는거임 ? .. 
     
     init(provider: PushNotificationProviderType) {
         self.provider = provider
@@ -39,9 +39,9 @@ class PushNotificationService: NSObject, PushNotificationServiceType {
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         
-        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { granted, error in
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { granted, error in // bool 값은 정상적으로 푸시권한을  받았다를 확인하는거고
             if error != nil {
-                completion(false)
+                completion(false)// 에러처리
             } else {
                 completion(granted)
             }

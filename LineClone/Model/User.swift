@@ -16,7 +16,7 @@ struct User: Identifiable {
     var phoneNumber: String?
     var profileURL: String?
     var description: String?
-    var fcmToken: String?
+    var fcmToken: String? // fcm 토큰을 저장하려고 만듬 왜냐면 상대방한테 알람이가야되니까 
 }
 
 extension User {

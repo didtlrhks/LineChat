@@ -16,7 +16,7 @@ struct UserObject: Codable {
     var phoneNumber: String?
     var profileURL: String?
     var description: String?
-    var fcmToken: String?
+    var fcmToken: String? // 유저정보에도 저장을 해주고
 }
 
 extension UserObject {
@@ -26,7 +26,7 @@ extension UserObject {
               phoneNumber: phoneNumber,
               profileURL: profileURL,
               description: description,
-              fcmToken: fcmToken
+              fcmToken: fcmToken // 초기화해주고 
         )
     }
 }

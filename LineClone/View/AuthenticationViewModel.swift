@@ -94,7 +94,7 @@ class AuthenticationViewModel: ObservableObject {
 //                print(error.localizedDescription)
 //            }
             
-        case .requestPushNotification:
+        case .requestPushNotification: // 여기에서 노티피케이션을 사용해도 되냐는 요청을 받는거임  그리고 setPushtoken 으로 가서 
             container.services.pushNotificationService.requestAuthorization { [weak self] granted in
                 guard granted else { return }
                 self?.send(action: .setPushToken)
