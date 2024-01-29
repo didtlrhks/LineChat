@@ -28,17 +28,19 @@ protocol UploadProviderType { // 프로토콜을 정의를해준다 이거는 Up
 
 class UploadProvider: UploadProviderType {  // UploadProviderType 이 프로토콜을 따르는 class 를 구현해줌 왜냐면 upload 함수를 사용한다고 하면 이 프로토콜을 따라야한다고 명시를 해주는것임
     
-    let storageRef = Storage.storage().reference() // 파이어베이스 스토리지를 초기화해주는 역할을 한다 
+    let storageRef = Storage.storage().reference() // 파이어베이스 스토리지를 초기화해주는 역할을 한다
     
     func upload(path: String, data: Data, fileName: String) -> AnyPublisher<URL, UploadError> {
-        let ref = storageRef.child(path).child(fileName)
+        let ref = storageRef.child(path).child(fileName) // 업로드할 파일의 레퍼런스 생성
         
         return ref.putData(data)
             .flatMap { _ in
                 ref.downloadURL()
             }
             .mapError { .error($0) }
-            .eraseToAnyPublisher()
+            .eraseToAnyPublisher()// 결국 반환값입ㅁ 즉AnyPublisher 의 리턴값이라고 생각하면 되겠음 즉 URL 을 반납하겠지
+        // 이부분들을 요약하자면 ref putdata 에서 파이어베이스에서 받아온 데이터들을 업로드하고 flatmap으로 업로드가 성공한 경우에 클로저로 값을 가져온다라는 개념을 가지고있고
+        //  { .error($0) }: Combine의 mapError 연산자를 사용하여 오류를 UploadError 열거형으로 매핑합니다. 이 부분은 오류가 발생하면 해당 오류를 UploadError.error 케이스로 래핑하여 처리합니다. error 정의를 따라가보면 저위에 이넘으로 정의되어있는 부분을 따라가도록 되어있음
     }
     
     func upload(path: String, data: Data, fileName: String) async throws -> URL {
@@ -47,5 +49,5 @@ class UploadProvider: UploadProviderType {  // UploadProviderType 이 프로토�
         let url = try await ref.downloadURL()
         
         return url
-    }
+    }//둘의 차이점을 보자하면 첫번째거는 combine 을 사용하고 밑에것은 비동기처리방식을 사용해서 처리를 해주는것같네 결국 둘이 같은 기능을 수행하는것은 맞음 
 }
