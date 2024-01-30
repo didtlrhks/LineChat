@@ -32,13 +32,15 @@ class UserDBRepository: UserDBRepositoryType {
     }
     
     func addUser(_ object: UserObject) -> AnyPublisher<Void, DBError> {
-        Just(object)
-            .compactMap { try? JSONEncoder().encode($0) }
-            .compactMap { try? JSONSerialization.jsonObject(with: $0, options: .fragmentsAllowed) }
-            .flatMap { value in
-                self.reference.setValue(key: DBKey.Users, path: object.id, value: value)
+        Just(object)// 저스트는 일단 간단하게 제공자라고 생각하면 댐 즉 지금 object를 뱉고있는 거지  데이터인거야 이제 밑부터는 이 데이터를 어떻게 처리할지를 알게되는거임
+            .compactMap { try? JSONEncoder().encode($0) }// 자그럼 위에서 나온 object 를 jsonencoder 를 통해서 json형식으로 인코딩을 하는거야 try? 로 인코딩이 성공하면 json 을 데이터를 밷는 거고 그게 아니면 nil을 밷게 되는거임
+            .compactMap { try? JSONSerialization.jsonObject(with: $0, options: .fragmentsAllowed) }// 자 그럼 위에 스트림을 이어서 생각을 해보면 json 을 받아와서 이번엔 역직렬화 즉 디코딩을 하는거임 실패하면 nil 배출 그럼 여기까지 object 가 just로 데이터화 됬고 그게 json화 됬고 그게 역직렬화를 통해 데이터베이스에 저장할수 있는 형식이 된거지 이제 그 데이터에 넣는과정을 밑에서 하는거야
+            .flatMap { value in // json 화된 친ㄱ가 value 에 있는거고 이거를 이용하여 값을 저장하는 역할을 하는거임
+                self.reference.setValue(key: DBKey.Users, path: object.id, value: value)//elf.reference.setValue(...)는 데이터베이스에 값을 저장하는 비동기 작업을 수행하고, 이를 flatMap 연산자를 사용하여 스트림으로 변환합니다. 이 스트림은 성공하면 Void 값을 반환하고, 실패하면 DBError를 반환합니다. 여기서 스트림으로 변환한다는 뜻은 이제 이 데이터를 가공해서 이벤트나 데이터베이스에서 사용할수이쏘록 변환을 해준다는 뜻을 얘기를 하는거지
             }
-            .eraseToAnyPublisher()
+            .eraseToAnyPublisher() // 이제 여기서 리턴을 해주는거임
+        // 그럼 이 함수를 다 탔고 user를 추가해주는 역할을 할 수 가 있는거지용~
+        
     }
     
     func addUserAfterContact(users: [UserObject]) -> AnyPublisher<Void, DBError> {
