@@ -26,3 +26,4 @@ extension ChatObject {
               date: Date(timeIntervalSince1970: date))
     }
 }
+//여기도 전에 Dto 와 마찬가지로 코더블을 사용해주고 이를 익스텐션해서 초기설정에서 값들을 Chat으로 던져주는 역할을 함
