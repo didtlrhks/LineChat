@@ -43,27 +43,28 @@ class UserDBRepository: UserDBRepositoryType {
         
     }
     
-    func addUserAfterContact(users: [UserObject]) -> AnyPublisher<Void, DBError> {
-        Publishers.Zip(users.publisher, users.publisher)
-            .compactMap { origin, converted in
-                if let converted = try? JSONEncoder().encode(converted) {
-                    return (origin, converted)
+    func addUserAfterContact(users: [UserObject]) -> AnyPublisher<Void, DBError> { // 함수 addUserAfterContact에 유저를 받아서 UserObject를 데이터를 받아서 AnyPublish 라는 어떤 값도 처리할수있는, 즉 자체적으로 중요한 속성이 없으며 업스트림 게시자의 요소 및 완료 값을 전달하는 구체적인 구현이라고 써져있음 애플 개발자 공식문서에 그래서 성공하면 Void 를 뱉고 그게 아니면 DBError 를 뱉는다 .
+        Publishers.Zip(users.publisher, users.publisher) // 일단 퍼블리셔라는것은 확장으로 정의된 다양한 연산자들이 퍼블리셔의 기능들로 열거형을 확장하는 클래스로 구현되는애들이고 그 중 zip이라는 애는 두개의 업스트림 게시자에 zip기능을 적용하여 생성된 퍼블리셔다 정확한의미로서 양쪽의 요소 쌍을 연결해서 두개의 다른 게시자의 스트림을 결합한다고 하네
+            .compactMap { origin, converted in // origin 과 converted 이라는 변수들을 선언을 해주고
+                if let converted = try? JSONEncoder().encode(converted) { // converted 라는 애를 인코딩해서 넣어주고
+                    return (origin, converted) // 여기서 둘다 리턴을 해준닥
                 } else {
                     return nil
                 }
             }
             .compactMap { origin, converted in
-                if let converted = try? JSONSerialization.jsonObject(with: converted, options: .fragmentsAllowed) {
-                    return (origin, converted)
+                if let converted = try? JSONSerialization.jsonObject(with: converted, options: .fragmentsAllowed) {//클래스를 사용해서 Foundatoion객체로 변환을 하고 그 객체를 Json으로 변환하는 구성임 인코딩된 convertedfㅡㄹ JSONSerialization을 통해 딕셔너리나 배열로 변환한다.
+                
+                    return (origin, converted)//반환에 성공하면 (origin, converted)튜플을 반환하고 실패하면 nil을 반환한다.
                 } else {
                     return nil
                 }
             }
-            .flatMap { origin, converted in
-                self.reference.setValue(key: DBKey.Users, path: origin.id, value: converted)
+            .flatMap { origin, converted in // 배열을 반환한다인거같은데 결국 평평하게 출력한다인데 오는 스트림을 하나로 합쳐서 보내준다 정도로 생각하면 될듯
+                self.reference.setValue(key: DBKey.Users, path: origin.id, value: converted) // 내가 구현한애들을 통해서 파라미터를 받아오고 그값들을 넣어준다,
             }
-            .last()
-            .eraseToAnyPublisher()
+            .last()// 스트림의 마지막 요소만 게시하는 게시자인다..
+            .eraseToAnyPublisher()//Anypublish 를 래핑해주다라는의미 래핑이라는건 어떤 값이 옵셔널로 선언이 되어있을때 그값이 옵셔널 타입내에 감싸져있다라는걸 의미한다
     }
     
     func getUser(userId: String) -> AnyPublisher<UserObject, DBError> {
